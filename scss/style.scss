@@ -1,0 +1,1366 @@
+@import "reset.scss";
+@import "mixin.scss";
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap");
+$tablet: 1179px;
+$mobile: 539px;
+
+#header {
+	width: 100%;
+	background: rgb(16, 16, 16);
+	position: fixed;
+	z-index: 5;
+	.inner {
+		width: 1180px;
+		height: 80px;
+		margin: 0 auto;
+		position: relative;
+		> h1 {
+			position: absolute;
+			left: 0px;
+			top: 20px;
+			a {
+				i {
+					font-size: 30px;
+					@include red;
+					&:hover {
+						color: white;
+					}
+				}
+			}
+		}
+	}
+	.menuWeb {
+		#gnb {
+			position: absolute;
+			right: 0;
+			top: 0;
+			li {
+				float: left;
+				a {
+					display: block;
+					padding: 30px 10px;
+					color: white;
+					font-family: "inter";
+					&:hover {
+						@include red;
+					}
+				}
+			}
+		}
+	}
+
+	.btnCall {
+		position: absolute;
+		position: absolute;
+		top: 50%;
+		right: 30px;
+		transform: translateY(-50%);
+		width: 25px;
+		height: 25px;
+		display: none;
+		&::before {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 2px;
+			background: white;
+			position: absolute;
+			top: 0;
+			left: 0;
+			transition: top 0.5s 0s, transform 0.5s 0.5s;
+		}
+		&::after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 2px;
+			background: white;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			transition: bottom 0.5s 0s, transform 0.5s 0.5s;
+		}
+		span {
+			display: block;
+			width: 100%;
+			height: 2px;
+			background: white;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			margin-top: -1px;
+			text-indent: -999999px;
+			transition: all 1s;
+		}
+		&.on {
+			&::before {
+				top: 50%;
+				margin-top: -1px;
+				transform: rotate(45deg);
+			}
+			&::after {
+				bottom: 50%;
+				margin-bottom: -1px;
+				transform: rotate(-45deg);
+			}
+			span {
+				transform: translateX(100%);
+				opacity: 0;
+			}
+		}
+	}
+	.menuMo {
+		width: 270px;
+		height: 100vh;
+		background-color: rgb(23, 23, 23);
+		position: fixed;
+		top: 0;
+		left: -270px;
+		z-index: 10;
+		padding: 35px 30px;
+		text-align: center;
+		transition: 0.5s;
+		display: none;
+		&.on {
+			left: 0;
+		}
+		h1 {
+			padding-bottom: 30px;
+			border-bottom: 3px solid white;
+			a {
+				display: block;
+				font: bold 40px/1 "arial";
+				color: white;
+				text-align: center;
+				padding: 50px;
+			}
+			span {
+				font-size: 12px;
+				color: #aaa;
+			}
+		}
+		#gnbMo {
+			li {
+				a {
+					display: block;
+					width: 100%;
+					padding: 40px 0;
+					// border-bottom: 1px solid white;
+					font: bold 25px/1 "inter";
+					color: white;
+				}
+			}
+		}
+	}
+}
+
+#visual {
+	width: 100%;
+	height: 680px;
+	background: rgb(16, 16, 16);
+	padding-top: 80px;
+	.inner {
+		width: 1180px;
+		margin: 0 auto;
+
+		.wrap {
+			width: 100%;
+			article {
+				display: flex;
+				.pic {
+					width: 80%;
+					margin-right: 40px;
+					background: url(../img/IMG_0111.PNG) no-repeat center/cover;
+					// background-size: cover;
+					// background-position: initial;
+					float: left;
+					height: 600px;
+				}
+				.hello {
+					display: flex;
+					flex-direction: column;
+
+					justify-content: center;
+					h1 {
+						font: bold 60px/1 "inter";
+						padding-bottom: 20px;
+					}
+					h2 {
+						font: 30px/1 "inter";
+						@include red;
+						font-size: 20px;
+						padding-bottom: 10px;
+					}
+					p {
+						// padding: 10px;
+						color: #999;
+						padding-bottom: 40px;
+						line-height: 30px;
+						opacity: 0.6;
+						font-family: "roboto";
+					}
+					a {
+						display: block;
+						height: 50x;
+						width: 250px;
+						@include button;
+						float: left;
+						color: white;
+						font: bold 15px/50px "inter";
+						text-align: center;
+						&:hover {
+							@include hobutton;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#top {
+	width: 100%;
+	padding-top: 100px;
+	background: linear-gradient(
+		90deg,
+		rgb(23, 23, 23) 50%,
+		rgb(16, 16, 16) 50%
+	);
+
+	.inner {
+		margin: 0 auto;
+		width: 1180px;
+		.wrap {
+			width: 100%;
+			&::after {
+				display: block;
+				content: "";
+				clear: both;
+			}
+			article {
+				padding: 50px;
+				background: rgb(29, 29, 29);
+				width: 380px;
+				float: left;
+				margin-right: 20px;
+				&:hover {
+					background: linear-gradient(
+						90deg,
+						rgb(126, 19, 26),
+						rgb(196, 30, 40)
+					);
+					.pic {
+						width: 100px;
+						height: 100px;
+						font-size: 60px;
+						i {
+							color: white;
+						}
+					}
+					p {
+						color: white;
+						opacity: 0.6;
+					}
+					a {
+						color: white;
+						i {
+							color: white;
+						}
+						&:hover {
+							color: rgb(16, 16, 16);
+							i {
+								color: rgb(16, 16, 16);
+							}
+						}
+					}
+				}
+				&:last-child {
+					margin-right: 0px;
+				}
+				.pic {
+					width: 100px;
+					height: 100px;
+					font-size: 60px;
+					i {
+						@include red;
+					}
+				}
+				> h1 {
+					font: bold 30px/1 "inter";
+					padding-top: 10px;
+				}
+				p {
+					font: 15px/20px "roboto";
+					display: block;
+					color: #999;
+					padding-top: 40px;
+					padding-bottom: 30px;
+					opacity: 0.6;
+				}
+				a {
+					font-size: 15px "roboto";
+					@include red;
+
+					i {
+						font: 15px;
+						@include red;
+					}
+				}
+			}
+		}
+	}
+}
+
+#rank {
+	width: 100%;
+	padding: 100px 0;
+	background: linear-gradient(
+		90deg,
+		rgb(23, 23, 23) 50%,
+		rgb(16, 16, 16) 50%
+	);
+	.inner {
+		width: 1180px;
+		margin: 0 auto;
+		.wrap {
+			width: 100%;
+			height: 300px;
+			&::after {
+				content: "";
+				display: block;
+				clear: both;
+			}
+			article {
+				width: 380px;
+				height: 140px;
+				background: rgb(29, 29, 29);
+				text-align: center;
+				padding-top: 35px;
+				> h1 {
+					font: bold 30px/1 "inter";
+					color: rgb(207, 24, 41);
+					margin-bottom: 10px;
+				}
+				h2 {
+					font: bold 15px/1 "roboto";
+					padding-top: 10px;
+					color: #999;
+				}
+				&:nth-of-type(1) {
+					width: 380px;
+					height: 300px;
+					background: rgb(23, 23, 23);
+					float: left;
+					margin-right: 20px;
+					text-align: center;
+					padding-top: 70px;
+					> h1 {
+						font: bold 90px/1 "inter";
+						color: rgb(207, 24, 41);
+					}
+					> h2 {
+						font: bold 25px/1 "roboto";
+						padding-top: 10px;
+						color: white;
+					}
+				}
+
+				&:nth-of-type(2) {
+					float: left;
+					h2 {
+						opacity: 0.6;
+					}
+				}
+				&:nth-of-type(3) {
+					float: right;
+					margin-bottom: 20px;
+					h2 {
+						opacity: 0.6;
+					}
+				}
+				&:nth-of-type(4) {
+					float: left;
+					margin-bottom: 20px;
+					margin-right: 20px;
+					margin-top: 20px;
+					h2 {
+						opacity: 0.6;
+					}
+				}
+
+				&:nth-of-type(5) {
+					float: left;
+					h2 {
+						opacity: 0.6;
+					}
+				}
+			}
+		}
+	}
+}
+
+#gallery {
+	width: 100%;
+	padding-top: 250px;
+	padding-bottom: 100px;
+	background: linear-gradient(
+		180deg,
+		rgb(16, 16, 16) 70%,
+		rgb(23, 23, 23) 30%
+	);
+	.inner {
+		width: 1180px;
+		margin: 0 auto;
+		position: relative;
+		.wrap {
+			width: 100%;
+			background-color: transparent;
+			&::after {
+				content: "";
+				display: block;
+				clear: both;
+			}
+			> h1 {
+				font: bold 30px/1 "inter";
+				margin-bottom: 20px;
+			}
+			p {
+				font: 15px/1 "roboto";
+				margin-bottom: 50px;
+				color: #999;
+				opacity: 0.6;
+			}
+			> a {
+				display: block;
+				height: 50x;
+				width: 180px;
+				@include button;
+				color: white;
+				font: bold 15px/50px "inter";
+				text-align: center;
+				position: absolute;
+				top: 0;
+				right: 0;
+				&:hover {
+					@include hobutton;
+				}
+			}
+			article {
+				margin-bottom: 80px;
+				background: rgb(29, 29, 29);
+				width: 580px;
+				height: 400px;
+				float: left;
+				.pic {
+					width: 500px;
+					height: 300px;
+					margin: 50px auto;
+					box-shadow: 3px 3px 10px rgba(0, 0, 0, 1);
+				}
+				&:nth-of-type(1) {
+					margin-right: 20px;
+					.pic {
+						width: 500px;
+						height: 300px;
+						margin: 50px auto;
+						background: url(../img/fashion.jpg);
+						background-size: cover;
+						background-repeat: no-repeat;
+						background-position: center;
+					}
+				}
+				&:nth-of-type(2) {
+					.pic {
+						width: 500px;
+						height: 300px;
+						margin: 50px auto;
+						background: url(../img/music.jpg);
+						background-size: cover;
+						background-repeat: no-repeat;
+					}
+				}
+				&:nth-of-type(3) {
+					margin-top: 40px;
+					margin-right: 20px;
+					.pic {
+						width: 500px;
+						height: 300px;
+						margin: 50px auto;
+						background: url(../img/arc.jpg);
+						background-size: cover;
+						background-repeat: no-repeat;
+					}
+				}
+				&:nth-of-type(4) {
+					margin-top: 40px;
+					.pic {
+						width: 500px;
+						height: 300px;
+						margin: 50px auto;
+						background: url(../img/paint.jpg);
+						background-size: cover;
+						background-repeat: no-repeat;
+					}
+				}
+				h2 {
+					font: bold 28px "inter";
+					padding-top: 15px;
+				}
+				a {
+					margin-top: 10px;
+					display: block;
+					font: bold 15px/30px "roboto";
+					@include red;
+					&:hover {
+						@include hored;
+					}
+					i {
+						font: 15px;
+						@include red;
+					}
+					&:hover {
+						i {
+							@include hored;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#banner {
+	width: 100%;
+	padding: 150px 0;
+	height: 300px;
+	background: linear-gradient(
+		180deg,
+		rgb(23, 23, 23) 50%,
+		rgb(16, 16, 16) 50%
+	);
+	.inner {
+		width: 1180px;
+		margin: 0 auto;
+		background: rgb(29, 29, 29);
+		position: relative;
+		transform: translateY(-50%);
+		.wrap {
+			padding: 50px 50px;
+			height: 300px;
+			width: 60%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin-left: 50px;
+			h1 {
+				font: bold 40px/50px "inter";
+				width: 580px;
+				margin-bottom: 20px;
+				margin-top: 50px;
+			}
+			p {
+				padding: 10px;
+				color: #999;
+				padding-bottom: 40px;
+				line-height: 30px;
+				opacity: 0.6;
+				font-family: "roboto";
+			}
+			a {
+				display: block;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translate(-100%, -50%);
+				width: 150px;
+				height: 50px;
+				font: bold 15px/50px "inter";
+				text-align: center;
+				box-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+
+				@include button;
+				&:hover {
+					@include hobutton;
+				}
+			}
+		}
+	}
+}
+
+#tab {
+	width: 100%;
+	height: 1100px;
+	background: rgb(16, 16, 16);
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	main {
+		width: 1180px;
+		height: 600px;
+		background: rgba(29, 29, 29, 0.6);
+		overflow: hidden;
+		display: flex;
+		justify-content: space-between;
+		nav {
+			width: 30%;
+			height: 100%;
+			display: flex;
+			background: rgba(29, 29, 29, 0.2);
+			align-items: flex-end;
+			justify-content: center;
+			ul {
+				width: 100%;
+				li {
+					width: 100%;
+					height: 150px;
+					a {
+						display: block;
+						width: 100%;
+						height: 100%;
+						color: #fff;
+						font: bold 25px/1 "inter";
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						background: rgba(0, 0, 0, 0.2);
+						&:hover {
+							@include red;
+						}
+					}
+					&.on {
+						a {
+							background: rgb(29, 29, 29);
+							// color: red;
+						}
+					}
+				}
+			}
+		}
+		section {
+			width: 70%;
+			height: 100%;
+			position: relative;
+			article {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				color: red;
+				font-size: 100px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				opacity: 0;
+				z-index: 1;
+				transform: 1s;
+
+				&.on {
+					opacity: 1;
+					z-index: 2;
+					.swiper {
+						width: 100%;
+						height: 100%;
+						.swiper-wrapper {
+							.swiper-slide {
+								background: rgb(29, 29, 29);
+
+								text-align: center;
+								font-size: 20px;
+								display: -webkit-box;
+								display: -ms-flexbox;
+								display: -webkit-flex;
+								display: flex;
+								-webkit-box-pack: center;
+								-ms-flex-pack: center;
+								-webkit-justify-content: center;
+								justify-content: center;
+								-webkit-box-align: center;
+								-ms-flex-align: center;
+								-webkit-align-items: center;
+								align-items: center;
+							}
+							img {
+								position: relative;
+								width: 100%;
+								max-height: 550px;
+								z-index: 5;
+								box-shadow: 3px 0px 10px rgba(0, 0, 0, 1);
+							}
+						}
+						.swiper-pagination-bullet {
+							width: 20px;
+							height: 20px;
+							text-align: center;
+							line-height: 20px;
+							font-size: 12px;
+							color: white;
+							opacity: 1;
+							background: rgba(0, 0, 0, 0.2);
+							&:hover {
+								background: rgb(207, 24, 41);
+								color: white;
+							}
+						}
+
+						.swiper-pagination-bullet-active {
+							color: #fff;
+							background: rgb(207, 24, 41);
+						}
+
+						.swiper-button-next {
+							color: #fff;
+							&:hover {
+								@include red;
+							}
+						}
+
+						.swiper-button-prev {
+							color: #fff;
+							&:hover {
+								@include red;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#faq {
+	width: 100%;
+	background: linear-gradient(
+		90deg,
+		rgb(16, 16, 16) 50%,
+		rgb(23, 23, 23) 50%
+	);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 60vh;
+	.container {
+		max-width: 1180px;
+		margin: 0px 40px;
+		flex-direction: column;
+
+		h1 {
+			color: white;
+			font-size: 30px;
+			font-family: "inter";
+		}
+		.question {
+			position: relative;
+			background: rgb(29, 29, 29);
+			margin-top: 20px;
+			overflow: hidden;
+			padding: 0px 20px 20px;
+
+			&:hover label::after {
+				@include red;
+			}
+			input {
+				appearance: none;
+				&:checked + label::after {
+					transform: rotate(135deg);
+					@include red;
+				}
+				&:checked + label h2 {
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					justify-content: flex-end;
+					font-size: 100px;
+					padding: 20px;
+					transition: 0.5s;
+					color: #999;
+					opacity: 0.4;
+				}
+				&:checked ~ .content {
+					max-height: 100vh;
+				}
+				&:checked ~ label h3 {
+					padding-top: 10px;
+					color: white;
+					font: bold 25px/1 "inter";
+				}
+			}
+			label {
+				display: flex;
+				align-items: center;
+				cursor: pointer;
+				&::after {
+					content: "+";
+					position: absolute;
+					right: 30px;
+					font-size: 30px;
+					transition: 1s;
+					color: white;
+				}
+				h2 {
+					width: 40px;
+					height: 40px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					color: #fff;
+					font-size: 30px;
+					font-family: "inter";
+					margin-right: 10px;
+					vertical-align: middle;
+					padding-left: 20px;
+				}
+				h3 {
+					font-weight: 500px;
+					color: white;
+					position: relative;
+					font-family: "inter";
+					z-index: 10;
+					padding-left: 20px;
+				}
+			}
+			.content {
+				max-height: 0;
+				transition: 1s;
+				overflow: hidden;
+				p {
+					position: relative;
+					padding: 15px 0;
+					z-index: 10;
+					font: bold 15px/20px "roboto";
+					max-width: 70%;
+					color: #999;
+					opacity: 0.6;
+					padding-left: 20px;
+					line-height: 20px;
+				}
+			}
+		}
+	}
+}
+
+#footer {
+	width: 100%;
+	padding-top: 100px;
+	margin-bottom: -100px;
+	height: 150px;
+	background: rgb(23, 23, 23);
+	.inner {
+		width: 1180px;
+		margin: 0 auto;
+		position: relative;
+
+		.logo1 {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			transform: translateY(-50%);
+			i {
+				@include red;
+				&:hover {
+					color: white;
+				}
+			}
+		}
+		.logo2 {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			transform: translateY(-50%);
+			i {
+				&:hover {
+					@include red;
+				}
+			}
+		}
+		.second {
+			position: absolute;
+			left: 50%;
+			bottom: 0px;
+
+			transform: translate(-50%, -50%);
+			li {
+				float: left;
+				margin-right: 20px;
+				color: black;
+				font-family: "inter";
+
+				a {
+					color: white;
+					&:hover {
+						@include red;
+					}
+				}
+			}
+		}
+	}
+}
+
+//tablet
+
+@media screen and (max-width: 1179px) {
+	#header {
+		.inner {
+			width: 100%;
+			height: 80px;
+			> h1 {
+				margin-left: 40px;
+			}
+			.menuWeb {
+				display: none;
+			}
+			.btnCall {
+				display: block;
+			}
+			.menuMo {
+				display: block;
+			}
+		}
+	}
+
+	#visual {
+		height: 500px;
+
+		.inner {
+			width: 100%;
+			.wrap {
+				article {
+					.pic {
+						margin-left: 40px;
+						height: 420px;
+						width: 60%;
+					}
+					.hello {
+						h1 {
+							font-size: 40px;
+						}
+						h2 {
+							font-size: 20px;
+						}
+						p {
+							font-size: 15px;
+							margin-right: 40px;
+						}
+					}
+				}
+			}
+		}
+	}
+	#top {
+		.inner {
+			width: 100%;
+			padding-left: 40px;
+			padding-right: 40px;
+			.wrap {
+				width: 100%;
+				article {
+					margin-right: 2%;
+					width: 32%;
+					height: 400px;
+					> h1 {
+						font-size: 18px;
+					}
+					p {
+						font-size: 13px;
+						padding-top: 20px;
+						padding-bottom: 10px;
+					}
+					a {
+						font-size: 13px;
+					}
+					&:last-child {
+						margin-right: 0;
+					}
+					.pic {
+						width: calc(100% / 3.5);
+					}
+				}
+			}
+		}
+	}
+
+	#rank {
+		.inner {
+			width: 100%;
+			padding-left: 40px;
+			padding-right: 40px;
+			.wrap {
+				> h1 {
+					width: 50%;
+				}
+				article {
+					width: 32%;
+					&:nth-of-type(1) {
+						margin-right: 2%;
+						width: 32%;
+					}
+					&:nth-of-type(2) {
+						margin-right: 2%;
+					}
+					&:nth-of-type(4) {
+						margin-right: 2%;
+					}
+				}
+			}
+		}
+	}
+	#gallery {
+		.inner {
+			width: 100%;
+			padding-left: 40px;
+			padding-right: 40px;
+			.wrap {
+				> a {
+					margin-right: 40px;
+				}
+				article {
+					width: 100%;
+					height: 600px;
+
+					.pic {
+						&:nth-of-type(1) {
+							width: 90%;
+							height: 400px;
+						}
+					}
+					h2 {
+						margin-top: -20px;
+						text-align: center;
+					}
+					a {
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+
+	#banner {
+		padding-right: 40px;
+		padding-left: 40px;
+		.inner {
+			width: 100%;
+
+			.wrap {
+				// padding-right: 40px;
+				// padding-left: 40px;
+				h1 {
+					width: 95%;
+					font-size: 40px;
+					margin-top: 10px;
+				}
+				p {
+					display: none;
+				}
+				a {
+					right: -10%;
+				}
+			}
+		}
+	}
+	#tab {
+		main {
+			height: 800px;
+			margin-right: 40px;
+			margin-left: 40px;
+			flex-direction: column;
+			nav {
+				width: 100%;
+				height: 20%;
+				ul {
+					li {
+						width: 25%;
+						float: left;
+					}
+				}
+			}
+			section {
+				width: 100%;
+				article {
+					.swiper {
+						.swiper-wrapper {
+							.swiper-slide {
+								img {
+									width: 60%;
+									height: 60%;
+								}
+							}
+						}
+					}
+					&.on {
+						.swiper {
+							.swiper-wrapper {
+								.swiper-slide {
+									img {
+										width: 100%;
+										height: 80%;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#footer {
+		padding-left: 40px;
+		padding-right: 40px;
+		.inner {
+			width: 100%;
+		}
+	}
+}
+
+// @media screen and (max-width: 690px) {
+// 	#top {
+// 		.inner {
+// 			.wrap {
+// 				article {
+// 					> h1 {
+// 						padding-bottom: 150px;
+// 					}
+
+// 					a {
+// 					}
+// 					p {
+// 						display: none;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+@media screen and (max-width: 539px) {
+	#visual {
+		.inner {
+			.wrap {
+				article {
+					padding-top: 20px;
+					padding-left: 40px;
+					padding-right: 40px;
+					text-align: center;
+					.pic {
+						display: none;
+					}
+					.hello {
+						p {
+							margin-right: 0;
+						}
+						a {
+							align-items: center;
+							margin: 0 auto;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#top {
+		.inner {
+			.wrap {
+				article {
+					padding: 30px 50px 0 50px;
+					width: 100%;
+					margin-bottom: 20px;
+					height: 300px;
+					&:hover {
+						background: linear-gradient(
+							90deg,
+							rgb(126, 19, 26),
+							rgb(196, 30, 40)
+						);
+						.pic {
+							width: 60px;
+							height: 60px;
+							font-size: 60px;
+							i {
+								color: white;
+							}
+						}
+						p {
+							color: white;
+							opacity: 0.6;
+						}
+						a {
+							color: white;
+							i {
+								color: white;
+							}
+							&:hover {
+								color: rgb(16, 16, 16);
+								i {
+									color: rgb(16, 16, 16);
+								}
+							}
+						}
+					}
+					.pic {
+						width: 60px;
+						height: 60px;
+						font-size: 60px;
+						margin-bottom: 30px;
+						i {
+							@include red;
+						}
+					}
+					> h1 {
+						font: bold 30px/1 "inter";
+						// padding-top: 10px;
+					}
+					p {
+						font: 15px/20px "roboto";
+						display: block;
+						color: #999;
+						// padding-top: 40px;
+						padding-bottom: 30px;
+						opacity: 0.6;
+					}
+					a {
+						font-size: 15px "roboto";
+						@include red;
+
+						i {
+							font: 15px;
+							@include red;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#rank {
+		.inner {
+			.wrap {
+				article {
+					&:nth-of-type(1) {
+						width: 100%;
+						margin-bottom: 20px;
+					}
+					&:nth-of-type(2) {
+						width: 47%;
+						margin-right: 6%;
+					}
+					&:nth-of-type(3) {
+						width: 47%;
+					}
+					&:nth-of-type(4) {
+						width: 47%;
+						margin-right: 6%;
+					}
+					&:nth-of-type(5) {
+						width: 47%;
+					}
+				}
+			}
+		}
+	}
+
+	#gallery {
+		.inner {
+			.wrap {
+				text-align: center;
+				> h1 {
+					margin-top: 40px;
+				}
+				p {
+					margin-bottom: 40px;
+				}
+				> a {
+					position: relative;
+					right: auto;
+					margin: 0 auto;
+					// margin-bottom: 20px;
+				}
+				article {
+					margin-top: 40px;
+
+					height: 360px;
+					.pic {
+						height: 300px;
+
+						&:nth-of-type(1) {
+							height: 300px;
+							margin: 30px auto;
+						}
+					}
+					h2 {
+						margin-top: 20px;
+					}
+				}
+			}
+		}
+	}
+
+	#banner {
+		.inner {
+			.wrap {
+				padding: 0;
+				width: 100%;
+				margin-left: 0;
+				margin-right: 40px;
+				justify-content: flex-start;
+				> h1 {
+					width: 100%;
+					font-size: 30px;
+					text-align: center;
+					margin-top: 50px;
+				}
+				a {
+					display: block;
+					margin: 0 auto;
+					width: 150px;
+					height: 50px;
+					text-align: center;
+					transform: translate(0, 0);
+					position: inherit;
+				}
+			}
+		}
+	}
+
+	#tab {
+		height: 800px;
+		main {
+			height: 500px;
+
+			nav {
+				ul {
+					li {
+						height: 100px;
+						a {
+							font-size: 15px;
+						}
+					}
+				}
+			}
+		}
+
+		section {
+			height: 400px;
+		}
+	}
+
+	#faq {
+		min-height: 80vh;
+	}
+
+	footer {
+		.inner {
+			.second {
+				width: 80%;
+				display: flex;
+				justify-content: center;
+			}
+		}
+	}
+}

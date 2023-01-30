@@ -1,0 +1,1182 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  color: white;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#header {
+  width: 100%;
+  background: rgb(16, 16, 16);
+  position: fixed;
+  z-index: 5;
+}
+#header .inner {
+  width: 1180px;
+  height: 80px;
+  margin: 0 auto;
+  position: relative;
+}
+#header .inner > h1 {
+  position: absolute;
+  left: 0px;
+  top: 20px;
+}
+#header .inner > h1 a i {
+  font-size: 30px;
+  color: rgb(207, 24, 41);
+}
+#header .inner > h1 a i:hover {
+  color: white;
+}
+#header .menuWeb #gnb {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#header .menuWeb #gnb li {
+  float: left;
+}
+#header .menuWeb #gnb li a {
+  display: block;
+  padding: 30px 10px;
+  color: white;
+  font-family: "inter";
+}
+#header .menuWeb #gnb li a:hover {
+  color: rgb(207, 24, 41);
+}
+#header .btnCall {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  display: none;
+}
+#header .btnCall::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: top 0.5s 0s, transform 0.5s 0.5s;
+}
+#header .btnCall::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: bottom 0.5s 0s, transform 0.5s 0.5s;
+}
+#header .btnCall span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  text-indent: -999999px;
+  transition: all 1s;
+}
+#header .btnCall.on::before {
+  top: 50%;
+  margin-top: -1px;
+  transform: rotate(45deg);
+}
+#header .btnCall.on::after {
+  bottom: 50%;
+  margin-bottom: -1px;
+  transform: rotate(-45deg);
+}
+#header .btnCall.on span {
+  transform: translateX(100%);
+  opacity: 0;
+}
+#header .menuMo {
+  width: 270px;
+  height: 100vh;
+  background-color: rgb(23, 23, 23);
+  position: fixed;
+  top: 0;
+  left: -270px;
+  z-index: 10;
+  padding: 35px 30px;
+  text-align: center;
+  transition: 0.5s;
+  display: none;
+}
+#header .menuMo.on {
+  left: 0;
+}
+#header .menuMo h1 {
+  padding-bottom: 30px;
+  border-bottom: 3px solid white;
+}
+#header .menuMo h1 a {
+  display: block;
+  font: bold 40px/1 "arial";
+  color: white;
+  text-align: center;
+  padding: 50px;
+}
+#header .menuMo h1 span {
+  font-size: 12px;
+  color: #aaa;
+}
+#header .menuMo #gnbMo li a {
+  display: block;
+  width: 100%;
+  padding: 40px 0;
+  font: bold 25px/1 "inter";
+  color: white;
+}
+
+#visual {
+  width: 100%;
+  height: 680px;
+  background: rgb(16, 16, 16);
+  padding-top: 80px;
+}
+#visual .inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+#visual .inner .wrap {
+  width: 100%;
+}
+#visual .inner .wrap article {
+  display: flex;
+}
+#visual .inner .wrap article .pic {
+  width: 80%;
+  margin-right: 40px;
+  background: url(../img/IMG_0111.PNG) no-repeat center/cover;
+  float: left;
+  height: 600px;
+}
+#visual .inner .wrap article .hello {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#visual .inner .wrap article .hello h1 {
+  font: bold 60px/1 "inter";
+  padding-bottom: 20px;
+}
+#visual .inner .wrap article .hello h2 {
+  font: 30px/1 "inter";
+  color: rgb(207, 24, 41);
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+#visual .inner .wrap article .hello p {
+  color: #999;
+  padding-bottom: 40px;
+  line-height: 30px;
+  opacity: 0.6;
+  font-family: "roboto";
+}
+#visual .inner .wrap article .hello a {
+  display: block;
+  height: 50x;
+  width: 250px;
+  background: linear-gradient(90deg, rgb(126, 19, 26), rgb(196, 30, 40));
+  float: left;
+  color: white;
+  font: bold 15px/50px "inter";
+  text-align: center;
+}
+#visual .inner .wrap article .hello a:hover {
+  background: linear-gradient(90deg, rgb(150, 33, 41), rgb(214, 40, 52));
+}
+
+#top {
+  width: 100%;
+  padding-top: 100px;
+  background: linear-gradient(90deg, rgb(23, 23, 23) 50%, rgb(16, 16, 16) 50%);
+}
+#top .inner {
+  margin: 0 auto;
+  width: 1180px;
+}
+#top .inner .wrap {
+  width: 100%;
+}
+#top .inner .wrap::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+#top .inner .wrap article {
+  padding: 50px;
+  background: rgb(29, 29, 29);
+  width: 380px;
+  float: left;
+  margin-right: 20px;
+}
+#top .inner .wrap article:hover {
+  background: linear-gradient(90deg, rgb(126, 19, 26), rgb(196, 30, 40));
+}
+#top .inner .wrap article:hover .pic {
+  width: 100px;
+  height: 100px;
+  font-size: 60px;
+}
+#top .inner .wrap article:hover .pic i {
+  color: white;
+}
+#top .inner .wrap article:hover p {
+  color: white;
+  opacity: 0.6;
+}
+#top .inner .wrap article:hover a {
+  color: white;
+}
+#top .inner .wrap article:hover a i {
+  color: white;
+}
+#top .inner .wrap article:hover a:hover {
+  color: rgb(16, 16, 16);
+}
+#top .inner .wrap article:hover a:hover i {
+  color: rgb(16, 16, 16);
+}
+#top .inner .wrap article:last-child {
+  margin-right: 0px;
+}
+#top .inner .wrap article .pic {
+  width: 100px;
+  height: 100px;
+  font-size: 60px;
+}
+#top .inner .wrap article .pic i {
+  color: rgb(207, 24, 41);
+}
+#top .inner .wrap article > h1 {
+  font: bold 30px/1 "inter";
+  padding-top: 10px;
+}
+#top .inner .wrap article p {
+  font: 15px/20px "roboto";
+  display: block;
+  color: #999;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  opacity: 0.6;
+}
+#top .inner .wrap article a {
+  font-size: 15px "roboto";
+  color: rgb(207, 24, 41);
+}
+#top .inner .wrap article a i {
+  font: 15px;
+  color: rgb(207, 24, 41);
+}
+
+#rank {
+  width: 100%;
+  padding: 100px 0;
+  background: linear-gradient(90deg, rgb(23, 23, 23) 50%, rgb(16, 16, 16) 50%);
+}
+#rank .inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+#rank .inner .wrap {
+  width: 100%;
+  height: 300px;
+}
+#rank .inner .wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#rank .inner .wrap article {
+  width: 380px;
+  height: 140px;
+  background: rgb(29, 29, 29);
+  text-align: center;
+  padding-top: 35px;
+}
+#rank .inner .wrap article > h1 {
+  font: bold 30px/1 "inter";
+  color: rgb(207, 24, 41);
+  margin-bottom: 10px;
+}
+#rank .inner .wrap article h2 {
+  font: bold 15px/1 "roboto";
+  padding-top: 10px;
+  color: #999;
+}
+#rank .inner .wrap article:nth-of-type(1) {
+  width: 380px;
+  height: 300px;
+  background: rgb(23, 23, 23);
+  float: left;
+  margin-right: 20px;
+  text-align: center;
+  padding-top: 70px;
+}
+#rank .inner .wrap article:nth-of-type(1) > h1 {
+  font: bold 90px/1 "inter";
+  color: rgb(207, 24, 41);
+}
+#rank .inner .wrap article:nth-of-type(1) > h2 {
+  font: bold 25px/1 "roboto";
+  padding-top: 10px;
+  color: white;
+}
+#rank .inner .wrap article:nth-of-type(2) {
+  float: left;
+}
+#rank .inner .wrap article:nth-of-type(2) h2 {
+  opacity: 0.6;
+}
+#rank .inner .wrap article:nth-of-type(3) {
+  float: right;
+  margin-bottom: 20px;
+}
+#rank .inner .wrap article:nth-of-type(3) h2 {
+  opacity: 0.6;
+}
+#rank .inner .wrap article:nth-of-type(4) {
+  float: left;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+#rank .inner .wrap article:nth-of-type(4) h2 {
+  opacity: 0.6;
+}
+#rank .inner .wrap article:nth-of-type(5) {
+  float: left;
+}
+#rank .inner .wrap article:nth-of-type(5) h2 {
+  opacity: 0.6;
+}
+
+#gallery {
+  width: 100%;
+  padding-top: 250px;
+  padding-bottom: 100px;
+  background: linear-gradient(180deg, rgb(16, 16, 16) 70%, rgb(23, 23, 23) 30%);
+}
+#gallery .inner {
+  width: 1180px;
+  margin: 0 auto;
+  position: relative;
+}
+#gallery .inner .wrap {
+  width: 100%;
+  background-color: transparent;
+}
+#gallery .inner .wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#gallery .inner .wrap > h1 {
+  font: bold 30px/1 "inter";
+  margin-bottom: 20px;
+}
+#gallery .inner .wrap p {
+  font: 15px/1 "roboto";
+  margin-bottom: 50px;
+  color: #999;
+  opacity: 0.6;
+}
+#gallery .inner .wrap > a {
+  display: block;
+  height: 50x;
+  width: 180px;
+  background: linear-gradient(90deg, rgb(126, 19, 26), rgb(196, 30, 40));
+  color: white;
+  font: bold 15px/50px "inter";
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#gallery .inner .wrap > a:hover {
+  background: linear-gradient(90deg, rgb(150, 33, 41), rgb(214, 40, 52));
+}
+#gallery .inner .wrap article {
+  margin-bottom: 80px;
+  background: rgb(29, 29, 29);
+  width: 580px;
+  height: 400px;
+  float: left;
+}
+#gallery .inner .wrap article .pic {
+  width: 500px;
+  height: 300px;
+  margin: 50px auto;
+  box-shadow: 3px 3px 10px rgb(0, 0, 0);
+}
+#gallery .inner .wrap article:nth-of-type(1) {
+  margin-right: 20px;
+}
+#gallery .inner .wrap article:nth-of-type(1) .pic {
+  width: 500px;
+  height: 300px;
+  margin: 50px auto;
+  background: url(../img/fashion.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#gallery .inner .wrap article:nth-of-type(2) .pic {
+  width: 500px;
+  height: 300px;
+  margin: 50px auto;
+  background: url(../img/music.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#gallery .inner .wrap article:nth-of-type(3) {
+  margin-top: 40px;
+  margin-right: 20px;
+}
+#gallery .inner .wrap article:nth-of-type(3) .pic {
+  width: 500px;
+  height: 300px;
+  margin: 50px auto;
+  background: url(../img/arc.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#gallery .inner .wrap article:nth-of-type(4) {
+  margin-top: 40px;
+}
+#gallery .inner .wrap article:nth-of-type(4) .pic {
+  width: 500px;
+  height: 300px;
+  margin: 50px auto;
+  background: url(../img/paint.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#gallery .inner .wrap article h2 {
+  font: bold 28px "inter";
+  padding-top: 15px;
+}
+#gallery .inner .wrap article a {
+  margin-top: 10px;
+  display: block;
+  font: bold 15px/30px "roboto";
+  color: rgb(207, 24, 41);
+}
+#gallery .inner .wrap article a:hover {
+  color: rgb(226, 40, 53);
+}
+#gallery .inner .wrap article a i {
+  font: 15px;
+  color: rgb(207, 24, 41);
+}
+#gallery .inner .wrap article a:hover i {
+  color: rgb(226, 40, 53);
+}
+
+#banner {
+  width: 100%;
+  padding: 150px 0;
+  height: 300px;
+  background: linear-gradient(180deg, rgb(23, 23, 23) 50%, rgb(16, 16, 16) 50%);
+}
+#banner .inner {
+  width: 1180px;
+  margin: 0 auto;
+  background: rgb(29, 29, 29);
+  position: relative;
+  transform: translateY(-50%);
+}
+#banner .inner .wrap {
+  padding: 50px 50px;
+  height: 300px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 50px;
+}
+#banner .inner .wrap h1 {
+  font: bold 40px/50px "inter";
+  width: 580px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+#banner .inner .wrap p {
+  padding: 10px;
+  color: #999;
+  padding-bottom: 40px;
+  line-height: 30px;
+  opacity: 0.6;
+  font-family: "roboto";
+}
+#banner .inner .wrap a {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-100%, -50%);
+  width: 150px;
+  height: 50px;
+  font: bold 15px/50px "inter";
+  text-align: center;
+  box-shadow: 2px 2px 10px rgb(0, 0, 0);
+  background: linear-gradient(90deg, rgb(126, 19, 26), rgb(196, 30, 40));
+}
+#banner .inner .wrap a:hover {
+  background: linear-gradient(90deg, rgb(150, 33, 41), rgb(214, 40, 52));
+}
+
+#tab {
+  width: 100%;
+  height: 1100px;
+  background: rgb(16, 16, 16);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#tab main {
+  width: 1180px;
+  height: 600px;
+  background: rgba(29, 29, 29, 0.6);
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+#tab main nav {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  background: rgba(29, 29, 29, 0.2);
+  align-items: flex-end;
+  justify-content: center;
+}
+#tab main nav ul {
+  width: 100%;
+}
+#tab main nav ul li {
+  width: 100%;
+  height: 150px;
+}
+#tab main nav ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font: bold 25px/1 "inter";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.2);
+}
+#tab main nav ul li a:hover {
+  color: rgb(207, 24, 41);
+}
+#tab main nav ul li.on a {
+  background: rgb(29, 29, 29);
+}
+#tab main section {
+  width: 70%;
+  height: 100%;
+  position: relative;
+}
+#tab main section article {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: red;
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: 1;
+  transform: 1s;
+}
+#tab main section article.on {
+  opacity: 1;
+  z-index: 2;
+}
+#tab main section article.on .swiper {
+  width: 100%;
+  height: 100%;
+}
+#tab main section article.on .swiper .swiper-wrapper .swiper-slide {
+  background: rgb(29, 29, 29);
+  text-align: center;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+#tab main section article.on .swiper .swiper-wrapper img {
+  position: relative;
+  width: 100%;
+  max-height: 550px;
+  z-index: 5;
+  box-shadow: 3px 0px 10px rgb(0, 0, 0);
+}
+#tab main section article.on .swiper .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: white;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+#tab main section article.on .swiper .swiper-pagination-bullet:hover {
+  background: rgb(207, 24, 41);
+  color: white;
+}
+#tab main section article.on .swiper .swiper-pagination-bullet-active {
+  color: #fff;
+  background: rgb(207, 24, 41);
+}
+#tab main section article.on .swiper .swiper-button-next {
+  color: #fff;
+}
+#tab main section article.on .swiper .swiper-button-next:hover {
+  color: rgb(207, 24, 41);
+}
+#tab main section article.on .swiper .swiper-button-prev {
+  color: #fff;
+}
+#tab main section article.on .swiper .swiper-button-prev:hover {
+  color: rgb(207, 24, 41);
+}
+
+#faq {
+  width: 100%;
+  background: linear-gradient(90deg, rgb(16, 16, 16) 50%, rgb(23, 23, 23) 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+#faq .container {
+  max-width: 1180px;
+  margin: 0px 40px;
+  flex-direction: column;
+}
+#faq .container h1 {
+  color: white;
+  font-size: 30px;
+  font-family: "inter";
+}
+#faq .container .question {
+  position: relative;
+  background: rgb(29, 29, 29);
+  margin-top: 20px;
+  overflow: hidden;
+  padding: 0px 20px 20px;
+}
+#faq .container .question:hover label::after {
+  color: rgb(207, 24, 41);
+}
+#faq .container .question input {
+  appearance: none;
+}
+#faq .container .question input:checked + label::after {
+  transform: rotate(135deg);
+  color: rgb(207, 24, 41);
+}
+#faq .container .question input:checked + label h2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: flex-end;
+  font-size: 100px;
+  padding: 20px;
+  transition: 0.5s;
+  color: #999;
+  opacity: 0.4;
+}
+#faq .container .question input:checked ~ .content {
+  max-height: 100vh;
+}
+#faq .container .question input:checked ~ label h3 {
+  padding-top: 10px;
+  color: white;
+  font: bold 25px/1 "inter";
+}
+#faq .container .question label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+#faq .container .question label::after {
+  content: "+";
+  position: absolute;
+  right: 30px;
+  font-size: 30px;
+  transition: 1s;
+  color: white;
+}
+#faq .container .question label h2 {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 30px;
+  font-family: "inter";
+  margin-right: 10px;
+  vertical-align: middle;
+  padding-left: 20px;
+}
+#faq .container .question label h3 {
+  font-weight: 500px;
+  color: white;
+  position: relative;
+  font-family: "inter";
+  z-index: 10;
+  padding-left: 20px;
+}
+#faq .container .question .content {
+  max-height: 0;
+  transition: 1s;
+  overflow: hidden;
+}
+#faq .container .question .content p {
+  position: relative;
+  padding: 15px 0;
+  z-index: 10;
+  font: bold 15px/20px "roboto";
+  max-width: 70%;
+  color: #999;
+  opacity: 0.6;
+  padding-left: 20px;
+  line-height: 20px;
+}
+
+#footer {
+  width: 100%;
+  padding-top: 100px;
+  margin-bottom: -100px;
+  height: 150px;
+  background: rgb(23, 23, 23);
+}
+#footer .inner {
+  width: 1180px;
+  margin: 0 auto;
+  position: relative;
+}
+#footer .inner .logo1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(-50%);
+}
+#footer .inner .logo1 i {
+  color: rgb(207, 24, 41);
+}
+#footer .inner .logo1 i:hover {
+  color: white;
+}
+#footer .inner .logo2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+#footer .inner .logo2 i:hover {
+  color: rgb(207, 24, 41);
+}
+#footer .inner .second {
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  transform: translate(-50%, -50%);
+}
+#footer .inner .second li {
+  float: left;
+  margin-right: 20px;
+  color: black;
+  font-family: "inter";
+}
+#footer .inner .second li a {
+  color: white;
+}
+#footer .inner .second li a:hover {
+  color: rgb(207, 24, 41);
+}
+
+@media screen and (max-width: 1179px) {
+  #header .inner {
+    width: 100%;
+    height: 80px;
+  }
+  #header .inner > h1 {
+    margin-left: 40px;
+  }
+  #header .inner .menuWeb {
+    display: none;
+  }
+  #header .inner .btnCall {
+    display: block;
+  }
+  #header .inner .menuMo {
+    display: block;
+  }
+  #visual {
+    height: 500px;
+  }
+  #visual .inner {
+    width: 100%;
+  }
+  #visual .inner .wrap article .pic {
+    margin-left: 40px;
+    height: 420px;
+    width: 60%;
+  }
+  #visual .inner .wrap article .hello h1 {
+    font-size: 40px;
+  }
+  #visual .inner .wrap article .hello h2 {
+    font-size: 20px;
+  }
+  #visual .inner .wrap article .hello p {
+    font-size: 15px;
+    margin-right: 40px;
+  }
+  #top .inner {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  #top .inner .wrap {
+    width: 100%;
+  }
+  #top .inner .wrap article {
+    margin-right: 2%;
+    width: 32%;
+    height: 400px;
+  }
+  #top .inner .wrap article > h1 {
+    font-size: 18px;
+  }
+  #top .inner .wrap article p {
+    font-size: 13px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  #top .inner .wrap article a {
+    font-size: 13px;
+  }
+  #top .inner .wrap article:last-child {
+    margin-right: 0;
+  }
+  #top .inner .wrap article .pic {
+    width: 28.5714285714%;
+  }
+  #rank .inner {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  #rank .inner .wrap > h1 {
+    width: 50%;
+  }
+  #rank .inner .wrap article {
+    width: 32%;
+  }
+  #rank .inner .wrap article:nth-of-type(1) {
+    margin-right: 2%;
+    width: 32%;
+  }
+  #rank .inner .wrap article:nth-of-type(2) {
+    margin-right: 2%;
+  }
+  #rank .inner .wrap article:nth-of-type(4) {
+    margin-right: 2%;
+  }
+  #gallery .inner {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  #gallery .inner .wrap > a {
+    margin-right: 40px;
+  }
+  #gallery .inner .wrap article {
+    width: 100%;
+    height: 600px;
+  }
+  #gallery .inner .wrap article .pic:nth-of-type(1) {
+    width: 90%;
+    height: 400px;
+  }
+  #gallery .inner .wrap article h2 {
+    margin-top: -20px;
+    text-align: center;
+  }
+  #gallery .inner .wrap article a {
+    text-align: center;
+  }
+  #banner {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+  #banner .inner {
+    width: 100%;
+  }
+  #banner .inner .wrap h1 {
+    width: 95%;
+    font-size: 40px;
+    margin-top: 10px;
+  }
+  #banner .inner .wrap p {
+    display: none;
+  }
+  #banner .inner .wrap a {
+    right: -10%;
+  }
+  #tab main {
+    height: 800px;
+    margin-right: 40px;
+    margin-left: 40px;
+    flex-direction: column;
+  }
+  #tab main nav {
+    width: 100%;
+    height: 20%;
+  }
+  #tab main nav ul li {
+    width: 25%;
+    float: left;
+  }
+  #tab main section {
+    width: 100%;
+  }
+  #tab main section article .swiper .swiper-wrapper .swiper-slide img {
+    width: 60%;
+    height: 60%;
+  }
+  #tab main section article.on .swiper .swiper-wrapper .swiper-slide img {
+    width: 100%;
+    height: 80%;
+  }
+  #footer {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  #footer .inner {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 539px) {
+  #visual .inner .wrap article {
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+  }
+  #visual .inner .wrap article .pic {
+    display: none;
+  }
+  #visual .inner .wrap article .hello p {
+    margin-right: 0;
+  }
+  #visual .inner .wrap article .hello a {
+    align-items: center;
+    margin: 0 auto;
+  }
+  #top .inner .wrap article {
+    padding: 30px 50px 0 50px;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 300px;
+  }
+  #top .inner .wrap article:hover {
+    background: linear-gradient(90deg, rgb(126, 19, 26), rgb(196, 30, 40));
+  }
+  #top .inner .wrap article:hover .pic {
+    width: 60px;
+    height: 60px;
+    font-size: 60px;
+  }
+  #top .inner .wrap article:hover .pic i {
+    color: white;
+  }
+  #top .inner .wrap article:hover p {
+    color: white;
+    opacity: 0.6;
+  }
+  #top .inner .wrap article:hover a {
+    color: white;
+  }
+  #top .inner .wrap article:hover a i {
+    color: white;
+  }
+  #top .inner .wrap article:hover a:hover {
+    color: rgb(16, 16, 16);
+  }
+  #top .inner .wrap article:hover a:hover i {
+    color: rgb(16, 16, 16);
+  }
+  #top .inner .wrap article .pic {
+    width: 60px;
+    height: 60px;
+    font-size: 60px;
+    margin-bottom: 30px;
+  }
+  #top .inner .wrap article .pic i {
+    color: rgb(207, 24, 41);
+  }
+  #top .inner .wrap article > h1 {
+    font: bold 30px/1 "inter";
+  }
+  #top .inner .wrap article p {
+    font: 15px/20px "roboto";
+    display: block;
+    color: #999;
+    padding-bottom: 30px;
+    opacity: 0.6;
+  }
+  #top .inner .wrap article a {
+    font-size: 15px "roboto";
+    color: rgb(207, 24, 41);
+  }
+  #top .inner .wrap article a i {
+    font: 15px;
+    color: rgb(207, 24, 41);
+  }
+  #rank .inner .wrap article:nth-of-type(1) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #rank .inner .wrap article:nth-of-type(2) {
+    width: 47%;
+    margin-right: 6%;
+  }
+  #rank .inner .wrap article:nth-of-type(3) {
+    width: 47%;
+  }
+  #rank .inner .wrap article:nth-of-type(4) {
+    width: 47%;
+    margin-right: 6%;
+  }
+  #rank .inner .wrap article:nth-of-type(5) {
+    width: 47%;
+  }
+  #gallery .inner .wrap {
+    text-align: center;
+  }
+  #gallery .inner .wrap > h1 {
+    margin-top: 40px;
+  }
+  #gallery .inner .wrap p {
+    margin-bottom: 40px;
+  }
+  #gallery .inner .wrap > a {
+    position: relative;
+    right: auto;
+    margin: 0 auto;
+  }
+  #gallery .inner .wrap article {
+    margin-top: 40px;
+    height: 360px;
+  }
+  #gallery .inner .wrap article .pic {
+    height: 300px;
+  }
+  #gallery .inner .wrap article .pic:nth-of-type(1) {
+    height: 300px;
+    margin: 30px auto;
+  }
+  #gallery .inner .wrap article h2 {
+    margin-top: 20px;
+  }
+  #banner .inner .wrap {
+    padding: 0;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 40px;
+    justify-content: flex-start;
+  }
+  #banner .inner .wrap > h1 {
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 50px;
+  }
+  #banner .inner .wrap a {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    transform: translate(0, 0);
+    position: inherit;
+  }
+  #tab {
+    height: 800px;
+  }
+  #tab main {
+    height: 500px;
+  }
+  #tab main nav ul li {
+    height: 100px;
+  }
+  #tab main nav ul li a {
+    font-size: 15px;
+  }
+  #tab section {
+    height: 400px;
+  }
+  #faq {
+    min-height: 80vh;
+  }
+  footer .inner .second {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

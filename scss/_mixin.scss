@@ -1,0 +1,13 @@
+@mixin red {
+	color: rgb(207, 24, 41);
+}
+
+@mixin button {
+	background: linear-gradient(90deg, rgb(126, 19, 26), rgb(196, 30, 40));
+}
+@mixin hobutton {
+	background: linear-gradient(90deg, rgb(150, 33, 41), rgb(214, 40, 52));
+}
+@mixin hored {
+	color: rgb(226, 40, 53);
+}
