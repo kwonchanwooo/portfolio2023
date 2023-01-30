@@ -17,6 +17,10 @@ a {
   color: white;
 }
 
+:root {
+  --swiper-theme-color: rgb(207, 24, 41);
+}
+
 #header {
   width: 100%;
   background: rgb(16, 16, 16);
@@ -482,12 +486,16 @@ a {
 }
 #gallery .inner .wrap article h2 {
   font: bold 28px "inter";
-  padding-top: 15px;
+  padding-top: 25px;
+  text-align: center;
+  float: left;
 }
 #gallery .inner .wrap article a {
-  margin-top: 10px;
+  width: 100px;
+  height: 59px;
+  padding-top: 25px;
   display: block;
-  font: bold 15px/30px "roboto";
+  font: bold 13px/40px "roboto";
   color: rgb(207, 24, 41);
 }
 #gallery .inner .wrap article a:hover {
@@ -530,7 +538,6 @@ a {
   margin-top: 50px;
 }
 #banner .inner .wrap p {
-  padding: 10px;
   color: #999;
   padding-bottom: 40px;
   line-height: 30px;
@@ -566,7 +573,7 @@ a {
 }
 #tab main {
   width: 1180px;
-  height: 600px;
+  height: 550px;
   background: rgba(29, 29, 29, 0.6);
   overflow: hidden;
   display: flex;
@@ -574,7 +581,7 @@ a {
 }
 #tab main nav {
   width: 30%;
-  height: 100%;
+  height: 550px;
   display: flex;
   background: rgba(29, 29, 29, 0.2);
   align-items: flex-end;
@@ -585,7 +592,7 @@ a {
 }
 #tab main nav ul li {
   width: 100%;
-  height: 150px;
+  height: 137.5px;
 }
 #tab main nav ul li a {
   display: block;
@@ -670,6 +677,26 @@ a {
   background: rgb(207, 24, 41);
   color: white;
 }
+#tab main section article.on .swiper .swiper-horizontal > .swiper-pagination-progressbar,
+#tab main section article.on .swiper .swiper-pagination-progressbar.swiper-pagination-horizontal,
+#tab main section article.on .swiper .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,
+#tab main section article.on .swiper .swiper-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+  width: 100%;
+  height: 4px;
+  left: 0;
+  top: auto;
+  bottom: 0;
+}
+#tab main section article.on .swiper .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: rgb(207, 24, 41);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  transform-origin: left top;
+}
 #tab main section article.on .swiper .swiper-pagination-bullet-active {
   color: #fff;
   background: rgb(207, 24, 41);
@@ -721,6 +748,7 @@ a {
 #faq .container .question input:checked + label::after {
   transform: rotate(135deg);
   color: rgb(207, 24, 41);
+  opacity: 0;
 }
 #faq .container .question input:checked + label h2 {
   width: 100%;
@@ -731,9 +759,9 @@ a {
   justify-content: flex-end;
   font-size: 100px;
   padding: 20px;
-  transition: 0.5s;
-  color: #999;
-  opacity: 0.4;
+  transition: 1s;
+  color: rgb(207, 24, 41);
+  opacity: 0.6;
 }
 #faq .container .question input:checked ~ .content {
   max-height: 100vh;
@@ -808,7 +836,7 @@ a {
 }
 #footer .inner .logo1 {
   position: absolute;
-  bottom: 0;
+  bottom: 25px;
   left: 0;
   transform: translateY(-50%);
 }
@@ -820,7 +848,7 @@ a {
 }
 #footer .inner .logo2 {
   position: absolute;
-  bottom: 0;
+  bottom: 25px;
   right: 0;
   transform: translateY(-50%);
 }
@@ -830,8 +858,8 @@ a {
 #footer .inner .second {
   position: absolute;
   left: 50%;
-  bottom: 0px;
-  transform: translate(-50%, -50%);
+  bottom: 25px;
+  transform: translate(-46%, -50%);
 }
 #footer .inner .second li {
   float: left;
@@ -844,6 +872,12 @@ a {
 }
 #footer .inner .second li a:hover {
   color: rgb(207, 24, 41);
+}
+#footer .inner p {
+  position: relative;
+  text-align: center;
+  font: 12px "inter";
+  color: #999;
 }
 
 @media screen and (max-width: 1179px) {
@@ -951,12 +985,19 @@ a {
     width: 90%;
     height: 400px;
   }
+  #gallery .inner .wrap article .pic:nth-of-type(1) a {
+    padding-left: 46px;
+    width: 200px;
+  }
   #gallery .inner .wrap article h2 {
+    width: 250px;
     margin-top: -20px;
-    text-align: center;
+    text-align: left;
+    padding-left: 46px;
   }
   #gallery .inner .wrap article a {
-    text-align: center;
+    padding-left: 46px;
+    width: 200px;
   }
   #banner {
     padding-right: 40px;
@@ -1130,7 +1171,12 @@ a {
     margin: 30px auto;
   }
   #gallery .inner .wrap article h2 {
-    margin-top: 20px;
+    margin-top: 5px;
+    padding-left: 0px;
+  }
+  #gallery .inner .wrap article a {
+    padding-left: 0;
+    text-align: left;
   }
   #banner .inner .wrap {
     padding: 0;

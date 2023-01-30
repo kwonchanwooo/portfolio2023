@@ -4,6 +4,9 @@
 $tablet: 1179px;
 $mobile: 539px;
 
+:root {
+	--swiper-theme-color: rgb(207, 24, 41);
+}
 #header {
 	width: 100%;
 	background: rgb(16, 16, 16);
@@ -504,12 +507,20 @@ $mobile: 539px;
 				}
 				h2 {
 					font: bold 28px "inter";
-					padding-top: 15px;
+					padding-top: 25px;
+					// width: 100%;
+					text-align: center;
+					float: left;
 				}
 				a {
-					margin-top: 10px;
+					// margin-left: 10px;
+					width: 100px;
+					height: 59px;
+					padding-top: 25px;
+
+					// float: left;
 					display: block;
-					font: bold 15px/30px "roboto";
+					font: bold 13px/40px "roboto";
 					@include red;
 					&:hover {
 						@include hored;
@@ -559,7 +570,7 @@ $mobile: 539px;
 				margin-top: 50px;
 			}
 			p {
-				padding: 10px;
+				// padding: 10px;
 				color: #999;
 				padding-bottom: 40px;
 				line-height: 30px;
@@ -599,14 +610,14 @@ $mobile: 539px;
 
 	main {
 		width: 1180px;
-		height: 600px;
+		height: 550px;
 		background: rgba(29, 29, 29, 0.6);
 		overflow: hidden;
 		display: flex;
 		justify-content: space-between;
 		nav {
 			width: 30%;
-			height: 100%;
+			height: 550px;
 			display: flex;
 			background: rgba(29, 29, 29, 0.2);
 			align-items: flex-end;
@@ -615,7 +626,7 @@ $mobile: 539px;
 				width: 100%;
 				li {
 					width: 100%;
-					height: 150px;
+					height: 137.5px;
 					a {
 						display: block;
 						width: 100%;
@@ -705,6 +716,29 @@ $mobile: 539px;
 								color: white;
 							}
 						}
+						.swiper-horizontal > .swiper-pagination-progressbar,
+						.swiper-pagination-progressbar.swiper-pagination-horizontal,
+						.swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,
+						.swiper-vertical
+							> .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+							width: 100%;
+							height: 4px;
+							left: 0;
+							top: auto;
+							bottom: 0;
+						}
+
+						.swiper-pagination-progressbar
+							.swiper-pagination-progressbar-fill {
+							background: rgb(207, 24, 41);
+							position: absolute;
+							left: 0;
+							top: 0;
+							width: 100%;
+							height: 100%;
+							transform: scale(0);
+							transform-origin: left top;
+						}
 
 						.swiper-pagination-bullet-active {
 							color: #fff;
@@ -767,6 +801,7 @@ $mobile: 539px;
 				&:checked + label::after {
 					transform: rotate(135deg);
 					@include red;
+					opacity: 0;
 				}
 				&:checked + label h2 {
 					width: 100%;
@@ -777,9 +812,9 @@ $mobile: 539px;
 					justify-content: flex-end;
 					font-size: 100px;
 					padding: 20px;
-					transition: 0.5s;
-					color: #999;
-					opacity: 0.4;
+					transition: 1s;
+					@include red;
+					opacity: 0.6;
 				}
 				&:checked ~ .content {
 					max-height: 100vh;
@@ -857,7 +892,7 @@ $mobile: 539px;
 
 		.logo1 {
 			position: absolute;
-			bottom: 0;
+			bottom: 25px;
 			left: 0;
 			transform: translateY(-50%);
 			i {
@@ -869,7 +904,7 @@ $mobile: 539px;
 		}
 		.logo2 {
 			position: absolute;
-			bottom: 0;
+			bottom: 25px;
 			right: 0;
 			transform: translateY(-50%);
 			i {
@@ -881,9 +916,8 @@ $mobile: 539px;
 		.second {
 			position: absolute;
 			left: 50%;
-			bottom: 0px;
-
-			transform: translate(-50%, -50%);
+			bottom: 25px;
+			transform: translate(-46%, -50%);
 			li {
 				float: left;
 				margin-right: 20px;
@@ -897,6 +931,13 @@ $mobile: 539px;
 					}
 				}
 			}
+		}
+		p {
+			position: relative;
+			// bottom: -50px;
+			text-align: center;
+			font: 12px "inter";
+			color: #999;
 		}
 	}
 }
@@ -1026,14 +1067,23 @@ $mobile: 539px;
 						&:nth-of-type(1) {
 							width: 90%;
 							height: 400px;
+							a {
+								// text-align: center;
+								padding-left: 46px;
+								width: 200px;
+							}
 						}
 					}
 					h2 {
+						width: 250px;
 						margin-top: -20px;
-						text-align: center;
+						text-align: left;
+						padding-left: 46px;
 					}
 					a {
-						text-align: center;
+						// text-align: center;
+						padding-left: 46px;
+						width: 200px;
 					}
 				}
 			}
@@ -1294,7 +1344,12 @@ $mobile: 539px;
 						}
 					}
 					h2 {
-						margin-top: 20px;
+						margin-top: 5px;
+						padding-left: 0px;
+					}
+					a {
+						padding-left: 0;
+						text-align: left;
 					}
 				}
 			}
