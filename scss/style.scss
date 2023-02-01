@@ -173,8 +173,8 @@ $mobile: 539px;
 				.pic {
 					width: 80%;
 					margin-right: 40px;
-					background: url(../img/IMG_0114.PNG) no-repeat center/cover;
-					filter: hue-rotate(90deg) saturate(100%);
+					background: url(../img/IMG_0116.PNG) no-repeat center/cover;
+
 					float: left;
 					height: 600px;
 				}
@@ -360,6 +360,11 @@ $mobile: 539px;
 					font: bold 30px/1 "inter";
 					color: rgb(207, 24, 41);
 					margin-bottom: 10px;
+					i {
+						color: gold;
+						margin-top: 20px;
+						letter-spacing: 5px;
+					}
 				}
 				h2 {
 					font: bold 15px/1 "roboto";
@@ -373,9 +378,10 @@ $mobile: 539px;
 					float: left;
 					margin-right: 20px;
 					text-align: center;
-					padding-top: 70px;
+					padding-top: 50px;
+
 					> h1 {
-						font: bold 90px/1 "inter";
+						font: bold 50px/1 "inter";
 						color: rgb(207, 24, 41);
 					}
 					> h2 {
@@ -483,7 +489,7 @@ $mobile: 539px;
 						width: 500px;
 						height: 300px;
 						margin: 50px auto;
-						background: url(../img/fashion.jpg);
+						background: url(../img/main/banquet.jpg);
 						background-size: cover;
 						background-repeat: no-repeat;
 						background-position: center;
@@ -494,7 +500,7 @@ $mobile: 539px;
 						width: 500px;
 						height: 300px;
 						margin: 50px auto;
-						background: url(../img/music.jpg);
+						background: url(../img/main/restaurant.jpg);
 						background-size: cover;
 						background-repeat: no-repeat;
 					}
@@ -506,9 +512,13 @@ $mobile: 539px;
 						width: 500px;
 						height: 300px;
 						margin: 50px auto;
-						background: url(../img/arc.jpg);
+						background: url(../img/main/bar.jpg);
 						background-size: cover;
 						background-repeat: no-repeat;
+					}
+					h2 {
+						width: 100%;
+						text-align: left;
 					}
 				}
 				&:nth-of-type(4) {
@@ -517,9 +527,13 @@ $mobile: 539px;
 						width: 500px;
 						height: 300px;
 						margin: 50px auto;
-						background: url(../img/paint.jpg);
+						background: url(../img/main/swim.jpg);
 						background-size: cover;
 						background-repeat: no-repeat;
+					}
+					h2 {
+						width: 100%;
+						text-align: left;
 					}
 				}
 				h2 {

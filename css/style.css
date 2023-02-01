@@ -178,8 +178,7 @@ a {
 #visual .inner .wrap article .pic {
   width: 80%;
   margin-right: 40px;
-  background: url(../img/IMG_0114.PNG) no-repeat center/cover;
-  filter: hue-rotate(90deg) saturate(100%);
+  background: url(../img/IMG_0116.PNG) no-repeat center/cover;
   float: left;
   height: 600px;
 }
@@ -349,6 +348,11 @@ a {
   color: rgb(207, 24, 41);
   margin-bottom: 10px;
 }
+#rank .inner .wrap article > h1 i {
+  color: gold;
+  margin-top: 20px;
+  letter-spacing: 5px;
+}
 #rank .inner .wrap article h2 {
   font: bold 15px/1 "roboto";
   padding-top: 10px;
@@ -361,10 +365,10 @@ a {
   float: left;
   margin-right: 20px;
   text-align: center;
-  padding-top: 70px;
+  padding-top: 50px;
 }
 #rank .inner .wrap article:nth-of-type(1) > h1 {
-  font: bold 90px/1 "inter";
+  font: bold 50px/1 "inter";
   color: rgb(207, 24, 41);
 }
 #rank .inner .wrap article:nth-of-type(1) > h2 {
@@ -466,7 +470,7 @@ a {
   width: 500px;
   height: 300px;
   margin: 50px auto;
-  background: url(../img/fashion.jpg);
+  background: url(../img/main/banquet.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -475,7 +479,7 @@ a {
   width: 500px;
   height: 300px;
   margin: 50px auto;
-  background: url(../img/music.jpg);
+  background: url(../img/main/restaurant.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -487,9 +491,13 @@ a {
   width: 500px;
   height: 300px;
   margin: 50px auto;
-  background: url(../img/arc.jpg);
+  background: url(../img/main/bar.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+}
+#gallery .inner .wrap article:nth-of-type(3) h2 {
+  width: 100%;
+  text-align: left;
 }
 #gallery .inner .wrap article:nth-of-type(4) {
   margin-top: 40px;
@@ -498,9 +506,13 @@ a {
   width: 500px;
   height: 300px;
   margin: 50px auto;
-  background: url(../img/paint.jpg);
+  background: url(../img/main/swim.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+}
+#gallery .inner .wrap article:nth-of-type(4) h2 {
+  width: 100%;
+  text-align: left;
 }
 #gallery .inner .wrap article h2 {
   font: bold 28px "inter";
