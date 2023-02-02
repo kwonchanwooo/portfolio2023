@@ -17,6 +17,30 @@ a {
   color: white;
 }
 
+#intro {
+  width: 100%;
+  height: 1500px;
+  background: rgb(16, 16, 16);
+  padding-top: 80px;
+}
+#intro .inner {
+  width: 100%;
+}
+#intro .inner .wrap {
+  width: 1180px;
+  margin: 0 auto;
+}
+#intro .inner .wrap article .pic {
+  width: 100%;
+  background: rgb(16, 16, 16);
+  text-align: center;
+}
+#intro .inner .wrap article .pic img {
+  height: 50%;
+  width: 50%;
+  object-fit: cover;
+}
+
 :root {
   --swiper-theme-color: rgb(207, 24, 41);
 }
