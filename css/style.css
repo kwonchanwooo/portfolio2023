@@ -17,31 +17,130 @@ a {
   color: white;
 }
 
-#intro {
+.intro {
   width: 100%;
-  height: 1500px;
-  background: rgb(16, 16, 16);
   padding-top: 80px;
+  background: rgb(16, 16, 16);
 }
-#intro .inner {
+.intro .inner {
   width: 100%;
+  height: 626px;
 }
-#intro .inner .wrap {
+.intro .inner .wrap {
   width: 1180px;
   margin: 0 auto;
 }
-#intro .inner .wrap article .pic {
-  width: 100%;
-  background: rgb(16, 16, 16);
-  text-align: center;
+.intro .inner .wrap article {
   position: relative;
 }
-#intro .inner .wrap article .pic img {
-  width: 50%;
+.intro .inner .wrap article .pic {
+  text-align: center;
+}
+.intro .inner .wrap article .pic img {
+  width: 60%;
   object-fit: cover;
   position: absolute;
-  right: 50;
+  left: 50;
+  transform: translateX(-50%);
+  z-index: 3;
 }
+.intro .inner .wrap article .txt {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.intro .inner .wrap article .txt > h1 {
+  width: 50%;
+  color: red;
+  margin-top: 10px;
+  font-size: 60px;
+}
+.intro .inner .wrap article .txt > p {
+  margin-top: 200px;
+  width: 50%;
+  color: #fff;
+  font-size: 90px;
+  white-space: normal;
+}
+
+.lists {
+  width: 100%;
+  height: 1100px;
+  padding: 100px 0px;
+  background: rgb(23, 23, 23);
+}
+.lists .inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+.lists .inner .wrap {
+  width: 100%;
+  height: 800px;
+}
+.lists .inner .wrap article {
+  float: left;
+  width: 280px;
+  height: 400px;
+  background: rgb(16, 16, 16);
+  margin-right: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.lists .inner .wrap article:nth-of-type(4) {
+  margin-right: 0px;
+}
+.lists .inner .wrap article:nth-of-type(8) {
+  margin-right: 0px;
+}
+.lists .inner .wrap article .pic {
+  margin: 20px;
+  width: 240px;
+  height: 240px;
+  background: #fff;
+  background-image: url(../img/department/dep1.jpg);
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100);
+  box-shadow: 3px 3px 10px rgb(0, 0, 0);
+}
+.lists .inner .wrap article .txt {
+  color: #fff;
+  font-family: "roboto";
+  text-align: center;
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+.lists .inner .wrap article .txt h2 {
+  color: rgb(207, 24, 41);
+}
+.lists .inner .wrap article .txt p {
+  font-size: 15px;
+  margin-top: 20px;
+}
+.lists .inner .wrap article:hover {
+  background: linear-gradient(90deg, rgb(126, 19, 26), rgb(196, 30, 40));
+}
+.lists .inner .wrap article:hover .pic {
+  filter: grayscale(0);
+}
+.lists .inner .wrap article:hover h2 {
+  color: #fff;
+}
+
+.location {
+  width: 100%;
+  padding: 100px 0;
+  background: rgb(16, 16, 16);
+}
+.location .inner {
+  margin: 0 auto;
+  width: 1180px;
+  height: 600px;
+}
+
 :root {
   --swiper-theme-color: rgb(207, 24, 41);
 }

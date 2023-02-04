@@ -1,0 +1,132 @@
+.intro {
+	width: 100%;
+	padding-top: 80px;
+	background: rgb(16, 16, 16);
+
+	.inner {
+		width: 100%;
+		height: 626px;
+
+		.wrap {
+			width: 1180px;
+			margin: 0 auto;
+
+			article {
+				position: relative;
+
+				.pic {
+					text-align: center;
+
+					img {
+						width: 60%;
+						object-fit: cover;
+						position: absolute;
+						left: 50;
+						transform: translateX(-50%);
+						z-index: 3;
+					}
+				}
+				.txt {
+					width: 100%;
+					display: flex;
+					flex-wrap: nowrap;
+					> h1 {
+						width: 50%;
+						color: red;
+						margin-top: 10px;
+						font-size: 60px;
+					}
+					> p {
+						margin-top: 200px;
+						width: 50%;
+						color: #fff;
+						font-size: 90px;
+						white-space: normal;
+					}
+				}
+			}
+		}
+	}
+}
+
+.lists {
+	width: 100%;
+	height: 1100px;
+	padding: 100px 0px;
+	background: rgb(23, 23, 23);
+	.inner {
+		width: 1180px;
+		margin: 0 auto;
+
+		.wrap {
+			width: 100%;
+			height: 800px;
+			// border: 1px solid red;
+			article {
+				float: left;
+				width: 280px;
+				height: 400px;
+				background: rgb(16, 16, 16);
+				// border: 1px solid red;
+				margin-right: 20px;
+				margin-bottom: 20px;
+				&:nth-of-type(4) {
+					margin-right: 0px;
+				}
+				&:nth-of-type(8) {
+					margin-right: 0px;
+				}
+				display: flex;
+				flex-direction: column;
+				.pic {
+					margin: 20px;
+					width: 240px;
+					height: 240px;
+					background: #fff;
+					background-image: url(../img/department/dep1.jpg);
+					border-radius: 50%;
+					background-repeat: no-repeat;
+					background-size: cover;
+					background-position: center;
+					filter: grayscale(100);
+					box-shadow: 3px 3px 10px rgba(0, 0, 0, 1);
+				}
+
+				.txt {
+					color: #fff;
+					font-family: "roboto";
+					text-align: center;
+					margin-top: 20px;
+					letter-spacing: 1px;
+					h2 {
+						@include red;
+					}
+					p {
+						font-size: 15px;
+						margin-top: 20px;
+					}
+				}
+				&:hover {
+					@include button;
+					.pic {
+						filter: grayscale(0);
+					}
+					h2 {
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}
+
+.location {
+	width: 100%;
+	padding: 100px 0;
+	background: rgb(16, 16, 16);
+	.inner {
+		margin: 0 auto;
+		width: 1180px;
+		height: 600px;
+	}
+}
