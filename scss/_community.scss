@@ -1,0 +1,112 @@
+.community {
+	width: 100%;
+	height: 1200px;
+	padding-top: 80px;
+	background: rgb(16, 16, 16);
+	.inner {
+		padding: 150px 0px;
+		width: 1180px;
+		margin: 0 auto;
+		h1 {
+			@include red;
+			font: bold 40px/1 "roboto";
+		}
+		table {
+			width: 100%;
+			margin-bottom: 50px;
+			.hidden {
+				opacity: 0;
+				top: -99999999999;
+			}
+			tr {
+				// &:nth-of-type(even) {
+				// 	background: #999;
+				// }
+				&:hover {
+					background: rgb(207, 24, 41);
+				}
+				th {
+					padding: 15px;
+					background: rgb(29, 29, 29);
+					color: #fff;
+					&:nth-of-type(1) {
+						width: 10%;
+					}
+					&:nth-of-type(3) {
+						width: 15%;
+					}
+					&:nth-of-type(4) {
+						width: 15%;
+					}
+				}
+				td {
+					padding: 13px;
+					border-bottom: 1px solid #666;
+					text-align: center;
+					&:nth-of-type(2) {
+						text-align: left;
+					}
+					&:nth-of-type(3) {
+						font-family: "맑은 고딕";
+					}
+					a {
+						color: white;
+						line-height: 1.4;
+					}
+				}
+			}
+		}
+		.pagination {
+			width: 100%;
+			text-align: center;
+			&::after {
+				content: "";
+				display: block;
+				clear: both;
+			}
+			.prev {
+				float: left;
+				display: block;
+				width: 30px;
+				height: 30px;
+				color: #eee;
+				font-size: 20px;
+				line-height: 30px;
+				text-align: center;
+				&:hover i {
+					@include red;
+				}
+			}
+			.next {
+				float: right;
+				display: block;
+				width: 30px;
+				height: 30px;
+				color: #eee;
+				font-size: 20px;
+				line-height: 30px;
+				text-align: center;
+				&:hover i {
+					@include red;
+				}
+			}
+			.numbers {
+				display: inline-block;
+				text-align: center;
+
+				a {
+					display: inline-block;
+					width: 30px;
+					height: 30px;
+					font: 20px/30px "roboto";
+					color: #666;
+					margin: 0 5px;
+					transition: 0.5s;
+					&:hover {
+						@include red;
+					}
+				}
+			}
+		}
+	}
+}

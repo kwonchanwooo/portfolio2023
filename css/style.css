@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap");
 * {
   margin: 0px;
@@ -119,6 +120,7 @@ a {
 .lists .inner .wrap article .txt p {
   font-size: 15px;
   margin-top: 20px;
+  color: #999;
 }
 .lists .inner .wrap article:hover {
   background: linear-gradient(90deg, rgb(126, 19, 26), rgb(196, 30, 40));
@@ -127,6 +129,9 @@ a {
   filter: grayscale(0);
 }
 .lists .inner .wrap article:hover h2 {
+  color: #fff;
+}
+.lists .inner .wrap article:hover p {
   color: #fff;
 }
 
@@ -139,6 +144,113 @@ a {
   margin: 0 auto;
   width: 1180px;
   height: 600px;
+}
+
+.community {
+  width: 100%;
+  height: 1200px;
+  padding-top: 80px;
+  background: rgb(16, 16, 16);
+}
+.community .inner {
+  padding: 150px 0px;
+  width: 1180px;
+  margin: 0 auto;
+}
+.community .inner h1 {
+  color: rgb(207, 24, 41);
+  font: bold 40px/1 "roboto";
+}
+.community .inner table {
+  width: 100%;
+  margin-bottom: 50px;
+}
+.community .inner table .hidden {
+  opacity: 0;
+  top: -99999999999;
+}
+.community .inner table tr:hover {
+  background: rgb(207, 24, 41);
+}
+.community .inner table tr th {
+  padding: 15px;
+  background: rgb(29, 29, 29);
+  color: #fff;
+}
+.community .inner table tr th:nth-of-type(1) {
+  width: 10%;
+}
+.community .inner table tr th:nth-of-type(3) {
+  width: 15%;
+}
+.community .inner table tr th:nth-of-type(4) {
+  width: 15%;
+}
+.community .inner table tr td {
+  padding: 13px;
+  border-bottom: 1px solid #666;
+  text-align: center;
+}
+.community .inner table tr td:nth-of-type(2) {
+  text-align: left;
+}
+.community .inner table tr td:nth-of-type(3) {
+  font-family: "맑은 고딕";
+}
+.community .inner table tr td a {
+  color: white;
+  line-height: 1.4;
+}
+.community .inner .pagination {
+  width: 100%;
+  text-align: center;
+}
+.community .inner .pagination::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.community .inner .pagination .prev {
+  float: left;
+  display: block;
+  width: 30px;
+  height: 30px;
+  color: #eee;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+.community .inner .pagination .prev:hover i {
+  color: rgb(207, 24, 41);
+}
+.community .inner .pagination .next {
+  float: right;
+  display: block;
+  width: 30px;
+  height: 30px;
+  color: #eee;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+.community .inner .pagination .next:hover i {
+  color: rgb(207, 24, 41);
+}
+.community .inner .pagination .numbers {
+  display: inline-block;
+  text-align: center;
+}
+.community .inner .pagination .numbers a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  font: 20px/30px "roboto";
+  color: #666;
+  margin: 0 5px;
+  transition: 0.5s;
+}
+.community .inner .pagination .numbers a:hover {
+  color: rgb(207, 24, 41);
 }
 
 :root {

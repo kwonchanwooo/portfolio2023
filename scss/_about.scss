@@ -104,6 +104,7 @@
 					p {
 						font-size: 15px;
 						margin-top: 20px;
+						color: #999;
 					}
 				}
 				&:hover {
@@ -112,6 +113,9 @@
 						filter: grayscale(0);
 					}
 					h2 {
+						color: #fff;
+					}
+					p {
 						color: #fff;
 					}
 				}
