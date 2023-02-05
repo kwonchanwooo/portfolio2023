@@ -31,37 +31,45 @@ a {
   width: 1180px;
   margin: 0 auto;
 }
-.intro .inner .wrap article {
-  position: relative;
-}
 .intro .inner .wrap article .pic {
-  text-align: center;
+  position: relative;
 }
 .intro .inner .wrap article .pic img {
   width: 60%;
-  object-fit: cover;
   position: absolute;
-  left: 50;
+  left: 50%;
   transform: translateX(-50%);
   z-index: 3;
 }
 .intro .inner .wrap article .txt {
   width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
 }
 .intro .inner .wrap article .txt > h1 {
+  float: left;
   width: 50%;
-  color: red;
-  margin-top: 10px;
+  color: rgb(207, 24, 41);
   font-size: 60px;
+  margin-top: 250px;
+  overflow: hidden;
+  font-family: roboto;
 }
 .intro .inner .wrap article .txt > p {
-  margin-top: 200px;
+  float: left;
+  margin-top: 0px;
   width: 50%;
+  padding-left: 120px;
   color: #fff;
-  font-size: 90px;
+  font-size: 40px;
   white-space: normal;
+  overflow: hidden;
+  text-align: right;
+  margin-top: 165px;
+  line-height: 1.2;
+  font-family: roboto;
+}
+.intro .inner .wrap article .txt > p span {
+  font: bold "roboto";
+  color: rgb(207, 24, 41);
 }
 
 .lists {
@@ -148,18 +156,25 @@ a {
 
 .community {
   width: 100%;
-  height: 1200px;
+  height: 1500px;
   padding-top: 80px;
-  background: rgb(16, 16, 16);
+  background: rgb(29, 29, 29);
+}
+.community .sub_visual {
+  width: 100%;
+  height: 400px;
+  background: url(../img/jonitop.jpg) no-repeat center/cover;
 }
 .community .inner {
-  padding: 150px 0px;
+  padding: 50px 0px;
   width: 1180px;
   margin: 0 auto;
 }
 .community .inner h1 {
   color: rgb(207, 24, 41);
+  margin-bottom: 50px;
   font: bold 40px/1 "roboto";
+  letter-spacing: 2px;
 }
 .community .inner table {
   width: 100%;
@@ -169,12 +184,15 @@ a {
   opacity: 0;
   top: -99999999999;
 }
+.community .inner table tr {
+  background: rgb(23, 23, 23);
+}
 .community .inner table tr:hover {
   background: rgb(207, 24, 41);
 }
 .community .inner table tr th {
   padding: 15px;
-  background: rgb(29, 29, 29);
+  background: rgb(16, 16, 16);
   color: #fff;
 }
 .community .inner table tr th:nth-of-type(1) {
@@ -188,7 +206,7 @@ a {
 }
 .community .inner table tr td {
   padding: 13px;
-  border-bottom: 1px solid #666;
+  border-bottom: 1px solid rgb(23, 23, 23);
   text-align: center;
 }
 .community .inner table tr td:nth-of-type(2) {
@@ -281,7 +299,7 @@ a {
   margin: 0 auto;
   background: rgb(29, 29, 29);
 }
-.join .jointop {
+.join .sub_visual {
   width: 100%;
   height: 400px;
   background: url(../img/jonitop.jpg) no-repeat center/cover;
