@@ -1,0 +1,123 @@
+.hidden {
+	position: absolute;
+	top: -99999999px;
+	opacity: 0;
+}
+
+.join {
+	width: 100%;
+	padding: 50px 0;
+	margin: 0 auto;
+	background: rgb(29, 29, 29);
+	.jointop {
+		width: 100%;
+
+		height: 400px;
+		background: url(../img/jonitop.jpg) no-repeat center/cover;
+	}
+
+	.inner {
+		width: 1180px;
+		height: 900px;
+		margin: 0 auto;
+		margin-top: 50px;
+		display: flex;
+
+		.wrap {
+			width: 60%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: rgb(23, 23, 23);
+			fieldset {
+				border: none;
+				table {
+					margin: 0 auto;
+					th,
+					td {
+						padding: 10px 25px;
+					}
+					th {
+						width: 30%;
+
+						input[type="reset"],
+						input[type="submit"] {
+							width: 30%;
+							height: 40px;
+							margin: 10px;
+							font: bold 14px/40px "arial";
+							color: #555;
+							cursor: pointer;
+							transition: 0.5s;
+							border: none;
+
+							&:hover {
+								background: #333;
+								color: #fff;
+							}
+						}
+					}
+					td {
+						width: 70%;
+						// border-left: 1px solid gray;
+						input[type="text"],
+						input[type="password"],
+						select {
+							width: 80%;
+							background: rgba(0, 0, 0, 0);
+							padding: 10px;
+							border-right: 0px;
+							border-top: 0px;
+							border-left: 0px;
+							border-bottom: 1px solid #666;
+						}
+						input[type="radio"],
+						input[type="checkbox"] {
+							margin-right: 30px;
+						}
+
+						textarea {
+							resize: none;
+							width: 80%;
+							height: 150px;
+							padding: 10px;
+							background: rgba(0, 0, 0, 0.03);
+							border: 1px solid #aaa;
+						}
+						p {
+							font: 11px/1 "맑은 고딕";
+							@include red;
+							margin-top: 5px;
+						}
+						:focus {
+							outline: none;
+						}
+					}
+				}
+			}
+		}
+		.help {
+			width: 40%;
+			background: rgba(16, 16, 16, 0.3);
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			h1 {
+				font: 60px/1 "inter";
+				margin-bottom: 50px;
+				@include red;
+			}
+			p {
+				width: 70%;
+				margin: 0 auto;
+				margin-bottom: 50px;
+				font: 25px/1 "inter";
+			}
+			span {
+				font: 20px/2 "roboto";
+				color: #666;
+			}
+		}
+	}
+}

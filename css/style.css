@@ -213,12 +213,19 @@ a {
 .community .inner .pagination .prev {
   float: left;
   display: block;
-  width: 30px;
+  width: 90px;
   height: 30px;
-  color: #eee;
+  color: #666;
   font-size: 20px;
   line-height: 30px;
   text-align: center;
+  opacity: 0;
+}
+.community .inner .pagination .prev i {
+  color: #666;
+}
+.community .inner .pagination .prev:hover {
+  color: rgb(207, 24, 41);
 }
 .community .inner .pagination .prev:hover i {
   color: rgb(207, 24, 41);
@@ -226,12 +233,18 @@ a {
 .community .inner .pagination .next {
   float: right;
   display: block;
-  width: 30px;
+  width: 90px;
   height: 30px;
-  color: #eee;
+  color: #666;
   font-size: 20px;
   line-height: 30px;
   text-align: center;
+}
+.community .inner .pagination .next i {
+  color: #666;
+}
+.community .inner .pagination .next:hover {
+  color: rgb(207, 24, 41);
 }
 .community .inner .pagination .next:hover i {
   color: rgb(207, 24, 41);
@@ -249,8 +262,129 @@ a {
   margin: 0 5px;
   transition: 0.5s;
 }
+.community .inner .pagination .numbers a.on {
+  color: rgb(207, 24, 41);
+}
 .community .inner .pagination .numbers a:hover {
   color: rgb(207, 24, 41);
+}
+
+.hidden {
+  position: absolute;
+  top: -99999999px;
+  opacity: 0;
+}
+
+.join {
+  width: 100%;
+  padding: 50px 0;
+  margin: 0 auto;
+  background: rgb(29, 29, 29);
+}
+.join .jointop {
+  width: 100%;
+  height: 400px;
+  background: url(../img/jonitop.jpg) no-repeat center/cover;
+}
+.join .inner {
+  width: 1180px;
+  height: 900px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+}
+.join .inner .wrap {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(23, 23, 23);
+}
+.join .inner .wrap fieldset {
+  border: none;
+}
+.join .inner .wrap fieldset table {
+  margin: 0 auto;
+}
+.join .inner .wrap fieldset table th,
+.join .inner .wrap fieldset table td {
+  padding: 10px 25px;
+}
+.join .inner .wrap fieldset table th {
+  width: 30%;
+}
+.join .inner .wrap fieldset table th input[type=reset],
+.join .inner .wrap fieldset table th input[type=submit] {
+  width: 30%;
+  height: 40px;
+  margin: 10px;
+  font: bold 14px/40px "arial";
+  color: #555;
+  cursor: pointer;
+  transition: 0.5s;
+  border: none;
+}
+.join .inner .wrap fieldset table th input[type=reset]:hover,
+.join .inner .wrap fieldset table th input[type=submit]:hover {
+  background: #333;
+  color: #fff;
+}
+.join .inner .wrap fieldset table td {
+  width: 70%;
+}
+.join .inner .wrap fieldset table td input[type=text],
+.join .inner .wrap fieldset table td input[type=password],
+.join .inner .wrap fieldset table td select {
+  width: 80%;
+  background: rgba(0, 0, 0, 0);
+  padding: 10px;
+  border-right: 0px;
+  border-top: 0px;
+  border-left: 0px;
+  border-bottom: 1px solid #666;
+}
+.join .inner .wrap fieldset table td input[type=radio],
+.join .inner .wrap fieldset table td input[type=checkbox] {
+  margin-right: 30px;
+}
+.join .inner .wrap fieldset table td textarea {
+  resize: none;
+  width: 80%;
+  height: 150px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid #aaa;
+}
+.join .inner .wrap fieldset table td p {
+  font: 11px/1 "맑은 고딕";
+  color: rgb(207, 24, 41);
+  margin-top: 5px;
+}
+.join .inner .wrap fieldset table td :focus {
+  outline: none;
+}
+.join .inner .help {
+  width: 40%;
+  background: rgba(16, 16, 16, 0.3);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.join .inner .help h1 {
+  font: 60px/1 "inter";
+  margin-bottom: 50px;
+  color: rgb(207, 24, 41);
+}
+.join .inner .help p {
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  font: 25px/1 "inter";
+}
+.join .inner .help span {
+  font: 20px/2 "roboto";
+  color: #666;
 }
 
 :root {
