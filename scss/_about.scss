@@ -1,73 +1,17 @@
-.intro {
-	width: 100%;
-	padding-top: 80px;
-	background: rgb(16, 16, 16);
-
-	.inner {
-		width: 100%;
-		height: 626px;
-
-		.wrap {
-			width: 1180px;
-			margin: 0 auto;
-
-			article {
-				.pic {
-					position: relative;
-
-					img {
-						width: 60%;
-						position: absolute;
-						left: 50%;
-						transform: translateX(-50%);
-						z-index: 3;
-					}
-				}
-				.txt {
-					width: 100%;
-
-					> h1 {
-						float: left;
-						width: 50%;
-						@include red;
-						font-size: 60px;
-						margin-top: 250px;
-						overflow: hidden;
-						font-family: roboto;
-					}
-					> p {
-						float: left;
-						margin-top: 0px;
-						width: 50%;
-						padding-left: 120px;
-						color: #fff;
-						font-size: 40px;
-						white-space: normal;
-						overflow: hidden;
-						text-align: right;
-						margin-top: 165px;
-						line-height: 1.2;
-						font-family: roboto;
-						span {
-							font: bold "roboto";
-							@include red;
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
 .lists {
+	.sub_visual {
+		width: 100%;
+		height: 400px;
+		background: url(../img/about/aboutop.jpg) no-repeat center/cover;
+	}
 	width: 100%;
-	height: 1100px;
+	height: 1450px;
 	padding: 100px 0px;
 	background: rgb(23, 23, 23);
 	.inner {
 		width: 1180px;
 		margin: 0 auto;
-
+		padding-top: 50px;
 		.wrap {
 			width: 100%;
 			height: 800px;
