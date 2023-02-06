@@ -855,18 +855,12 @@ a {
   margin-right: 20px;
 }
 #gallery .inner .wrap article:nth-of-type(1) .pic {
-  width: 500px;
-  height: 300px;
-  margin: 50px auto;
   background: url(../img/main/banquet.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 #gallery .inner .wrap article:nth-of-type(2) .pic {
-  width: 500px;
-  height: 300px;
-  margin: 50px auto;
   background: url(../img/main/restaurant.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -876,42 +870,31 @@ a {
   margin-right: 20px;
 }
 #gallery .inner .wrap article:nth-of-type(3) .pic {
-  width: 500px;
-  height: 300px;
-  margin: 50px auto;
   background: url(../img/main/bar.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
-#gallery .inner .wrap article:nth-of-type(3) h2 {
-  width: 100%;
-  text-align: left;
-}
 #gallery .inner .wrap article:nth-of-type(4) {
   margin-top: 40px;
+  padding: 0 auto;
 }
 #gallery .inner .wrap article:nth-of-type(4) .pic {
-  width: 500px;
-  height: 300px;
-  margin: 50px auto;
   background: url(../img/main/swim.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
-#gallery .inner .wrap article:nth-of-type(4) h2 {
-  width: 100%;
-  text-align: left;
-}
 #gallery .inner .wrap article h2 {
   font: bold 28px "inter";
   padding-top: 25px;
-  text-align: center;
+  width: 100%;
+  text-align: left;
   float: left;
 }
 #gallery .inner .wrap article a {
-  width: 100px;
+  width: 100%;
   height: 59px;
   padding-top: 25px;
+  text-align: left;
   display: block;
   font: bold 13px/40px "roboto";
   color: rgb(207, 24, 41);
@@ -1380,6 +1363,7 @@ a {
   #rank .inner .wrap article:nth-of-type(1) {
     margin-right: 2%;
     width: 32%;
+    padding-top: 50px;
   }
   #rank .inner .wrap article:nth-of-type(2) {
     margin-right: 2%;
@@ -1395,6 +1379,12 @@ a {
   #gallery .inner .wrap > a {
     margin-right: 40px;
   }
+  #gallery .inner .wrap h1 {
+    padding-top: 10px;
+  }
+  #gallery .inner .wrap p {
+    margin-top: 40px;
+  }
   #gallery .inner .wrap article {
     width: 100%;
     height: 600px;
@@ -1408,14 +1398,13 @@ a {
     width: 200px;
   }
   #gallery .inner .wrap article h2 {
-    width: 250px;
+    width: 100%;
     margin-top: -20px;
-    text-align: left;
-    padding-left: 46px;
+    text-align: center;
   }
   #gallery .inner .wrap article a {
-    padding-left: 46px;
-    width: 200px;
+    text-align: center;
+    width: 100%;
   }
   #banner {
     padding-right: 40px;
@@ -1548,6 +1537,7 @@ a {
   #rank .inner .wrap article:nth-of-type(1) {
     width: 100%;
     margin-bottom: 20px;
+    padding-top: 85px;
   }
   #rank .inner .wrap article:nth-of-type(2) {
     width: 47%;
@@ -1594,7 +1584,7 @@ a {
   }
   #gallery .inner .wrap article a {
     padding-left: 0;
-    text-align: left;
+    text-align: center;
   }
   #banner .inner .wrap {
     padding: 0;
