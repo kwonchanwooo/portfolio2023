@@ -21,7 +21,7 @@ a {
 .lists {
   width: 100%;
   height: 1450px;
-  padding: 100px 0px;
+  padding: 80px 0px;
   background: rgb(23, 23, 23);
 }
 .lists .sub_visual {
@@ -32,11 +32,15 @@ a {
 .lists .inner {
   width: 1180px;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 30px;
 }
 .lists .inner .wrap {
   width: 100%;
   height: 800px;
+}
+.lists .inner .wrap h1 {
+  font: bold 60px/1 "inter";
+  margin-bottom: 30px;
 }
 .lists .inner .wrap article {
   float: left;
@@ -55,7 +59,7 @@ a {
   margin-right: 0px;
 }
 .lists .inner .wrap article .pic {
-  margin: 20px;
+  margin: 20px auto;
   width: 240px;
   height: 240px;
   background: #fff;
@@ -106,6 +110,68 @@ a {
   height: 600px;
 }
 
+@media screen and (max-width: 1179px) {
+  .lists {
+    height: 1850px;
+  }
+  .lists .sub_visual {
+    height: 300px;
+  }
+  .lists .inner {
+    width: 100%;
+    padding: 20px 20px;
+  }
+  .lists .inner .wrap {
+    width: 100%;
+  }
+  .lists .inner .wrap h1 {
+    font-size: 40px;
+  }
+  .lists .inner .wrap article {
+    width: 32%;
+    margin-right: 2%;
+  }
+  .lists .inner .wrap article:nth-of-type(3) {
+    margin-right: 0px;
+  }
+  .lists .inner .wrap article:nth-of-type(4) {
+    margin-right: 2%;
+  }
+  .lists .inner .wrap article:nth-of-type(5) {
+    margin-right: 2%;
+  }
+  .lists .inner .wrap article:nth-of-type(6) {
+    float: left;
+    margin-right: 0px;
+  }
+  .lists .inner .wrap article .pic {
+    width: 25vw;
+    height: 25vw;
+  }
+}
+@media screen and (max-width: 539px) {
+  .lists .sub_visual {
+    height: 200px;
+  }
+  .lists .inner .wrap article {
+    float: none;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .lists .inner .wrap article .pic {
+    width: 25vw;
+    margin: auto;
+  }
+  .lists .inner .wrap article .txt {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0;
+  }
+}
 .community {
   width: 100%;
   height: 1500px;
@@ -252,7 +318,6 @@ a {
   background: rgb(29, 29, 29);
 }
 .join .sub_visual {
-  width: 100%;
   height: 400px;
   background: url(../img/jointop.jpg) no-repeat center/cover;
 }
