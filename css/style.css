@@ -189,8 +189,7 @@ a {
   margin: 0 auto;
 }
 .community .inner h1 {
-  color: rgb(207, 24, 41);
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   font: bold 40px/1 "roboto";
   letter-spacing: 2px;
 }
@@ -257,6 +256,10 @@ a {
   text-align: center;
   opacity: 0;
 }
+.community .inner .pagination .prev span {
+  opacity: 1;
+  color: #666;
+}
 .community .inner .pagination .prev i {
   color: #666;
 }
@@ -264,6 +267,9 @@ a {
   color: rgb(207, 24, 41);
 }
 .community .inner .pagination .prev:hover i {
+  color: rgb(207, 24, 41);
+}
+.community .inner .pagination .prev:hover span {
   color: rgb(207, 24, 41);
 }
 .community .inner .pagination .next {
@@ -276,6 +282,12 @@ a {
   line-height: 30px;
   text-align: center;
 }
+.community .inner .pagination .next span {
+  opacity: 1;
+  position: relative;
+  top: auto;
+  color: #666;
+}
 .community .inner .pagination .next i {
   color: #666;
 }
@@ -283,6 +295,9 @@ a {
   color: rgb(207, 24, 41);
 }
 .community .inner .pagination .next:hover i {
+  color: rgb(207, 24, 41);
+}
+.community .inner .pagination .next:hover span {
   color: rgb(207, 24, 41);
 }
 .community .inner .pagination .numbers {
@@ -305,6 +320,89 @@ a {
   color: rgb(207, 24, 41);
 }
 
+@media screen and (max-width: 1179px) {
+  .community {
+    height: 900px;
+    height: 1850px;
+  }
+  .community .sub_visual {
+    height: 300px;
+  }
+  .community .inner {
+    width: 100%;
+    padding: 20px 20px;
+  }
+  .community .inner .pagination .prev {
+    width: 80px;
+    font-size: 20px;
+    line-height: 20px;
+    height: 20px;
+  }
+  .community .inner .pagination .prev i {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .community .inner .pagination .next {
+    width: 80px;
+    font-size: 20px;
+    line-height: 20px;
+    height: 20px;
+  }
+  .community .inner .pagination .next i {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .community .inner .pagination .numbers a {
+    width: 20px;
+  }
+  .community .inner .wrap {
+    width: 100%;
+  }
+  .community .inner .wrap h1 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 539px) {
+  .community {
+    height: 1300px;
+  }
+  .community .sub_visual {
+    height: 200px;
+  }
+  .community .inner {
+    width: 100%;
+    padding: 20px 20px;
+  }
+  .community .inner .pagination .prev {
+    width: 15px;
+  }
+  .community .inner .pagination .next {
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+  }
+  .community .inner .pagination .next i {
+    height: 30px;
+  }
+  .community .inner .pagination .next span {
+    position: absolute;
+    top: -9999999999px;
+    opacity: 0;
+  }
+  .community .inner .pagination .next i {
+    font-size: 15px;
+  }
+  .community .inner .pagination .numbers a {
+    width: 15px;
+    font-size: 15px;
+  }
+  .community .inner .wrap {
+    width: 100%;
+  }
+  .community .inner .wrap h1 {
+    font-size: 40px;
+  }
+}
 .hidden {
   position: absolute;
   top: -99999999px;

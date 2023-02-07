@@ -14,8 +14,7 @@
 		width: 1180px;
 		margin: 0 auto;
 		h1 {
-			@include red;
-			margin-bottom: 50px;
+			margin-bottom: 20px;
 			font: bold 40px/1 "roboto";
 			letter-spacing: 2px;
 		}
@@ -81,12 +80,19 @@
 				line-height: 30px;
 				text-align: center;
 				opacity: 0;
+				span {
+					opacity: 1;
+					color: #666;
+				}
 				i {
 					color: #666;
 				}
 				&:hover {
 					@include red;
 					i {
+						@include red;
+					}
+					span {
 						@include red;
 					}
 				}
@@ -101,12 +107,21 @@
 				font-size: 20px;
 				line-height: 30px;
 				text-align: center;
+				span {
+					opacity: 1;
+					position: relative;
+					top: auto;
+					color: #666;
+				}
 				i {
 					color: #666;
 				}
 				&:hover {
 					@include red;
 					i {
+						@include red;
+					}
+					span {
 						@include red;
 					}
 				}
@@ -129,6 +144,101 @@
 					&:hover {
 						@include red;
 					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1179px) {
+	.community {
+		height: 900px;
+		.sub_visual {
+			height: 300px;
+		}
+		height: 1850px;
+		.inner {
+			width: 100%;
+			padding: 20px 20px;
+			.pagination {
+				.prev {
+					width: 80px;
+					font-size: 20px;
+					line-height: 20px;
+
+					height: 20px;
+					i {
+						font-size: 20px;
+						line-height: 20px;
+					}
+				}
+				.next {
+					width: 80px;
+					font-size: 20px;
+					line-height: 20px;
+
+					height: 20px;
+					i {
+						font-size: 20px;
+						line-height: 20px;
+					}
+				}
+				.numbers {
+					a {
+						width: 20px;
+					}
+				}
+			}
+			.wrap {
+				width: 100%;
+				h1 {
+					font-size: 40px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 539px) {
+	.community {
+		height: 1300px;
+		.sub_visual {
+			height: 200px;
+		}
+		.inner {
+			width: 100%;
+			padding: 20px 20px;
+			.pagination {
+				.prev {
+					width: 15px;
+				}
+				.next {
+					line-height: 30px;
+					width: 30px;
+					height: 30px;
+					i {
+						height: 30px;
+					}
+					span {
+						position: absolute;
+						top: -9999999999px;
+						opacity: 0;
+					}
+					i {
+						font-size: 15px;
+					}
+				}
+				.numbers {
+					a {
+						width: 15px;
+						font-size: 15px;
+					}
+				}
+			}
+			.wrap {
+				width: 100%;
+				h1 {
+					font-size: 40px;
 				}
 			}
 		}
