@@ -1,0 +1,100 @@
+.facilities {
+	.sub_visual {
+		width: 100%;
+
+		height: 400px;
+		background: url(../img/comtop.jpg) no-repeat center/cover;
+	}
+	.inner {
+		h1 {
+			padding-top: 40px;
+			width: 1180px;
+			margin: 0 auto;
+			font: bold 45px "inter";
+		}
+		width: 100%;
+		height: 1400px;
+		background: rgb(29, 29, 29);
+		#pics {
+			padding-top: 40px;
+			width: 1180px;
+			margin: 0 auto;
+			#wrap {
+				background: rgb(23, 23, 23);
+				width: 100%;
+				padding: 50px;
+				display: flex;
+				flex-direction: column;
+				nav {
+					ul {
+						li {
+							float: left;
+							width: 25%;
+							text-align: center;
+							font: bold 30px "inter";
+							margin-bottom: 20px;
+							&.on {
+								a {
+									@include red;
+								}
+							}
+						}
+					}
+				}
+				#list {
+					width: 100%;
+					opacity: 0;
+					transform: translateY(100px);
+					transition: 1s;
+					&.on {
+						opacity: 1;
+						transform: translateY(0px);
+					}
+					&::after {
+						content: "";
+						display: block;
+						clear: both;
+					}
+					li {
+						width: calc(100% / 3);
+						float: left;
+						padding: 10px;
+						div {
+							width: 100%;
+							padding: 20px;
+							background: rgb(16, 16, 16);
+
+							box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+							a {
+								> img {
+									width: 100%;
+									filter: grayscale(100%);
+								}
+							}
+							// p {
+							// 	font: 12px/1.2 "arial";
+							// 	color: #777;
+							// 	margin-top: 10px;
+							// 	margin-bottom: 20px;
+							// }
+							&:hover {
+								@include button;
+								a {
+									> img {
+										box-shadow: 5px 5px 20px
+											rgba(0, 0, 0, 0.5);
+
+										filter: grayscale(0%);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#item {
+}
