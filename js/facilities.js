@@ -19,6 +19,8 @@ const bangal = `${base}method=${method}&api_key=${key}&per_page=${per_page}&gall
 
 
 callData(rest);
+
+
 // callData(bar);
 
 // li.forEach((a, i) => {
@@ -70,6 +72,7 @@ function createList(items) {
             <a href=${imgSrcBig}>
               <img src=${imgSrc}>
             </a>
+            
             </p>
           </div>
         </li>
