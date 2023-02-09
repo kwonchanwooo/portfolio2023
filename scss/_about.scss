@@ -168,6 +168,48 @@
 	}
 }
 
+.location {
+	width: 100%;
+	background: rgb(23, 23, 23);
+	.inner {
+		margin: 0 auto;
+		padding-top: 30px;
+		h2 {
+			margin-bottom: 30px;
+			font: bold 60px/1 "inter";
+		}
+		width: 1180px;
+		height: 900px;
+		.wrap {
+			width: 100%;
+			#map {
+				width: 100%;
+				height: 650px;
+			}
+			.chain {
+				float: left;
+
+				li {
+					float: left;
+					&.on {
+						a {
+							@include red;
+						}
+					}
+					a {
+						display: block;
+						width: 200px;
+						height: 60px;
+						background: rgb(16, 16, 16);
+						color: white;
+						text-align: center;
+						font: bold 24px/60px "roboto";
+					}
+				}
+			}
+		}
+	}
+}
 figure.pop {
 	width: 100%;
 	height: 100vh;

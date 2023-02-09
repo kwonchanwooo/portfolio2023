@@ -25,6 +25,19 @@
 				padding: 50px;
 				display: flex;
 				flex-direction: column;
+				.loading {
+					width: 100px;
+					position: absolute;
+					top: 100%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					transition: 1s;
+					opacity: 1;
+					@include red;
+					&.off {
+						opacity: 0;
+					}
+				}
 				nav {
 					ul {
 						li {

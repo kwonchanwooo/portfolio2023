@@ -8,32 +8,48 @@ const banqgal = "72157721476188121"
 const key = '68728a337d057b4402914f709958247a';
 const per_page = 1;
 const frame = document.querySelector('#list');
+const loading = document.querySelector('.loading');
 
 const li = document.querySelectorAll('#wrap nav ul li')
-console.log(li)
-const rest = `${base}method=${method}&api_key=${key}&per_page=${per_page}&gallery_id=${restgal}&format=json&nojsoncallback=1`;
-const bar = `${base}method=${method}&api_key=${key}&per_page=${per_page}&gallery_id=${bargal}&format=json&nojsoncallback=1`;
-const spa = `${base}method=${method}&api_key=${key}&per_page=${per_page}&gallery_id=${spagal}&format=json&nojsoncallback=1`;
 const bangal = `${base}method=${method}&api_key=${key}&per_page=${per_page}&gallery_id=${banqgal}&format=json&nojsoncallback=1`;
 
 
 
-callData(rest);
 
 
-// callData(bar);
-
-// li.forEach((a, i) => {
-//     a.addEventListener('click', (e) => {
-//         e.preventDefault();
-//         on(li, i)
-//         if (li[1].on) callData(rest)
-//         if (li[2].on) callData(bar)
-
-//     })
-// })
+callData(bangal)
+li[0].addEventListener('click', () => {
+    const bangal = `${base}method=${method}&api_key=${key}&per_page=${per_page}&gallery_id=${banqgal}&format=json&nojsoncallback=1`;
 
 
+    callData(bangal)
+})
+
+li[1].addEventListener('click', () => {
+    const rest = `${base}method=${method}&api_key=${key}&per_page=${per_page}&gallery_id=${restgal}&format=json&nojsoncallback=1`;
+
+    callData(rest)
+})
+li[2].addEventListener('click', () => {
+    const bar = `${base}method=${method}&api_key=${key}&per_page=${per_page}&gallery_id=${bargal}&format=json&nojsoncallback=1`;
+
+    callData(bar)
+})
+li[3].addEventListener('click', () => {
+    const spa = `${base}method=${method}&api_key=${key}&per_page=${per_page}&gallery_id=${spagal}&format=json&nojsoncallback=1`;
+    callData(spa)
+})
+
+
+
+li.forEach((a, i) => {
+    a.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        on(li, i)
+
+    })
+})
 
 function on(a, i) {
     for (let el of a) {
@@ -43,10 +59,12 @@ function on(a, i) {
 }
 
 function callData(rest) {
+    frame.innerHTML = '';
+    loading.classList.remove('off');
+    frame.classList.remove('on');
+
     fetch(rest)
         .then((data) => {
-            // console.log(data)
-
             return data.json();
         })
         .then((json) => {
@@ -72,9 +90,7 @@ function createList(items) {
             <a href=${imgSrcBig}>
               <img src=${imgSrc}>
             </a>
-            
-            </p>
-          </div>
+                </div>
         </li>
       `;
     });
@@ -95,6 +111,7 @@ function delayLoading() {
 }
 
 function isoLayout() {
+    loading.classList.add('off');
     frame.classList.add('on');
     new Isotope('#list', {
         itemSelection: '.item',
