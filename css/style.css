@@ -158,18 +158,18 @@ a {
 }
 .youtube .inner .vidList article .con h2 {
   margin-top: 10px;
-  font: bold 20px/1.2 "arial";
+  font: bold 20px/1.2 "inter";
   color: white;
   margin-bottom: 15px;
 }
 .youtube .inner .vidList article .con p {
-  font: 14px/1.4 "arial";
+  font: 14px/1.4 "roboto";
   color: #666;
   margin-top: 30px;
 }
 .youtube .inner .vidList article .con span {
   margin-top: 30px;
-  font: bold 16px/1 "arial";
+  font: bold 16px/1 "roboto";
   float: right;
   color: rgb(207, 24, 41);
 }
@@ -238,6 +238,13 @@ figure.pop .btnClose {
 }
 figure.pop .btnClose i {
   color: rgb(207, 24, 41);
+}
+
+.side {
+  width: 200px;
+  position: sticky;
+  top: 700px;
+  left: 400px;
 }
 
 @media screen and (max-width: 1179px) {
@@ -831,6 +838,155 @@ figure.pop .btnClose i {
 .facilities .inner #pics #wrap #list li div:hover a > img {
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
   filter: grayscale(0%);
+}
+
+.room .inner section {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+}
+.room .inner section > h1 {
+  position: absolute;
+  top: 100px;
+  font: bold 40px/1 "inter";
+  color: white;
+}
+.room .inner section .pic {
+  width: 100%;
+  height: 800px;
+}
+.room .inner section .pic .swiper {
+  width: 100%;
+  height: 600px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.room .inner section .pic .swiper .swiper-pagination {
+  padding-bottom: 60px;
+}
+.room .inner section .pic .swiper .swiper-wrapper .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 600px;
+  height: 400px;
+}
+.room .inner section .pic .swiper .swiper-wrapper .swiper-slide img {
+  display: block;
+  width: 100%;
+}
+.room .inner section .desc {
+  width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  height: 350px;
+}
+.room .inner section .desc > article {
+  padding: 20px;
+  text-align: left;
+  width: 35%;
+  background: rgb(16, 16, 16);
+  opacity: 0;
+  transform: rotateY(200deg) translateY(100px);
+  transition: 0.5s;
+  display: flex;
+}
+.room .inner section .desc > article:hover {
+  background: linear-gradient(90deg, rgb(126, 19, 26), rgb(196, 30, 40));
+}
+.room .inner section .desc > article .right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.room .inner section .desc > article .right span {
+  width: 100%;
+  font: bold 24px/2 "roboto";
+}
+.room .inner section .desc > article .left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.room .inner section .desc > article .left span {
+  width: 100%;
+  font: bold 24px/2 "roboto";
+}
+.room .inner section .desc > p {
+  height: 350px;
+  width: 60%;
+  margin-right: 4%;
+  font: bold 24px/1.2 "roboto";
+  color: #999;
+  display: flex;
+  align-items: center;
+}
+.room .inner section.on article {
+  opacity: 1;
+  transform: rotateY(0deg) translateY(0px);
+}
+.room .inner section:nth-of-type(1) {
+  height: 100vh;
+  background: rgb(29, 29, 29);
+}
+.room .inner section:nth-of-type(1) > h1 {
+  position: absolute;
+  top: 150px;
+  font: bold 40px/1 "inter";
+  color: white;
+}
+.room .inner section:nth-of-type(1) .pic .swiper .swiper-pagination {
+  padding-bottom: 40px;
+}
+.room .inner section:nth-of-type(1) .desc {
+  margin-top: 40px;
+}
+.room .inner section:nth-of-type(2) {
+  background: rgb(23, 23, 23);
+}
+.room .inner section:nth-of-type(2).on article {
+  opacity: 1;
+  transform: rotateY(0deg) translateY(0px);
+}
+.room .inner section:nth-of-type(3) {
+  background: rgb(29, 29, 29);
+}
+.room .inner section:nth-of-type(3) .pic {
+  width: 100%;
+}
+.room .inner section:nth-of-type(4) {
+  background: rgb(23, 23, 23);
+}
+.room .inner section:nth-of-type(4) .pic {
+  width: 100%;
+}
+.room .inner ul {
+  z-index: 5;
+  position: fixed;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+}
+.room .inner ul li {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: white;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.room .inner ul li.on {
+  background: rgb(207, 24, 41);
+  height: 80px;
 }
 
 :root {
@@ -1656,7 +1812,7 @@ figure.pop .btnClose i {
   padding-top: 100px;
   margin-bottom: -100px;
   height: 150px;
-  background: rgb(23, 23, 23);
+  background: rgb(16, 16, 16);
 }
 #footer .inner {
   width: 1180px;

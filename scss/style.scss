@@ -7,7 +7,8 @@ $mobile: 539px;
 @import "community.scss";
 @import "join.scss";
 @import "facilities.scss";
-:root  {
+@import "rooms.scss";
+:root {
 	--swiper-theme-color: rgb(207, 24, 41);
 }
 #header {
@@ -902,7 +903,7 @@ $mobile: 539px;
 	padding-top: 100px;
 	margin-bottom: -100px;
 	height: 150px;
-	background: rgb(23, 23, 23);
+	background: rgb(16, 16, 16);
 	.inner {
 		width: 1180px;
 		margin: 0 auto;

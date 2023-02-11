@@ -145,12 +145,12 @@
 					h2 {
 						margin-top: 10px;
 
-						font: bold 20px/1.2 "arial";
+						font: bold 20px/1.2 "inter";
 						color: white;
 						margin-bottom: 15px;
 					}
 					p {
-						font: 14px/1.4 "arial";
+						font: 14px/1.4 "roboto";
 						color: #666;
 						margin-top: 30px;
 
@@ -158,7 +158,7 @@
 					}
 					span {
 						margin-top: 30px;
-						font: bold 16px/1 "arial";
+						font: bold 16px/1 "roboto";
 						float: right;
 						@include red;
 					}
@@ -236,7 +236,13 @@ figure.pop {
 		}
 	}
 }
-
+.side {
+	width: 200px;
+	// height: 200px;
+	position: sticky;
+	top: 700px;
+	left: 400px;
+}
 @media screen and (max-width: 1179px) {
 	.lists {
 		.sub_visual {
