@@ -340,16 +340,16 @@ figure.pop .btnClose i {
   background: url(../img/comtop.jpg) no-repeat center/cover;
 }
 .community .inner {
-  padding: 50px 0px;
   width: 1180px;
   margin: 0 auto;
 }
 .community .inner h1 {
-  margin-bottom: 20px;
-  font: bold 40px/1 "roboto";
+  padding-top: 40px;
+  font: bold 45px "inter";
   letter-spacing: 2px;
 }
 .community .inner table {
+  padding-top: 40px;
   width: 100%;
   margin-bottom: 50px;
 }

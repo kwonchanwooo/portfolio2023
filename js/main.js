@@ -1,12 +1,13 @@
-// const btns = document.querySelectorAll('ul li')
 const btns = document.querySelectorAll('#tab main nav ul li')
 const boxes = document.querySelectorAll('#tab main section article')
 const btnCall = document.querySelector('.btnCall');
 const menuMo = document.querySelector('.menuMo');
+const topbtn = document.querySelector('.logo2')
 
-
-console.log(btns)
-console.log(boxes)
+topbtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+})
 
 
 btns.forEach((a, i) => {
