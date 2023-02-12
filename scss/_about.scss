@@ -8,15 +8,15 @@
 	}
 	width: 100%;
 	height: 1450px;
-	padding: 0px;
 	background: rgb(23, 23, 23);
 	.inner {
-		width: 1180px;
-		margin: 0 auto;
+		width: 100%;
 		padding-top: 30px;
 		.wrap {
-			width: 100%;
+			width: 1180px;
 			height: 800px;
+			margin: 0 auto;
+
 			h1 {
 				font: bold 60px/1 "inter";
 				margin-bottom: 30px;
@@ -199,6 +199,8 @@
 						}
 					}
 					a {
+						margin-top: 20px;
+						margin-right: 20px;
 						display: block;
 						width: 200px;
 						height: 60px;
@@ -240,10 +242,29 @@ figure.pop {
 }
 .side {
 	width: 200px;
-	// height: 200px;
-	position: sticky;
-	top: 700px;
-	left: 400px;
+	position: absolute;
+	top: 600px;
+	left: 450px;
+	ul {
+		li {
+			a {
+				margin-bottom: 20px;
+				display: block;
+				height: 50px;
+				width: 100%;
+				text-align: center;
+				font: 24px/50px "roboto";
+				background: rgb(16, 16, 16);
+				&:hover {
+					@include red;
+					i {
+						@include red;
+						font-size: 24px/50px;
+					}
+				}
+			}
+		}
+	}
 }
 @media screen and (max-width: 1179px) {
 	.lists {

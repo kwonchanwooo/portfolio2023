@@ -22,7 +22,6 @@ a {
   padding-top: 80px;
   width: 100%;
   height: 1450px;
-  padding: 0px;
   background: rgb(23, 23, 23);
 }
 .lists .sub_visual {
@@ -31,13 +30,13 @@ a {
   background: url(../img/about/aboutop.jpg) no-repeat center/cover;
 }
 .lists .inner {
-  width: 1180px;
-  margin: 0 auto;
+  width: 100%;
   padding-top: 30px;
 }
 .lists .inner .wrap {
-  width: 100%;
+  width: 1180px;
   height: 800px;
+  margin: 0 auto;
 }
 .lists .inner .wrap h1 {
   font: bold 60px/1 "inter";
@@ -206,6 +205,8 @@ a {
   color: rgb(207, 24, 41);
 }
 .location .inner .wrap .chain li a {
+  margin-top: 20px;
+  margin-right: 20px;
   display: block;
   width: 200px;
   height: 60px;
@@ -243,9 +244,25 @@ figure.pop .btnClose i {
 
 .side {
   width: 200px;
-  position: sticky;
-  top: 700px;
-  left: 400px;
+  position: absolute;
+  top: 600px;
+  left: 450px;
+}
+.side ul li a {
+  margin-bottom: 20px;
+  display: block;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  font: 24px/50px "roboto";
+  background: rgb(16, 16, 16);
+}
+.side ul li a:hover {
+  color: rgb(207, 24, 41);
+}
+.side ul li a:hover i {
+  color: rgb(207, 24, 41);
+  font-size: 24px/50px;
 }
 
 @media screen and (max-width: 1179px) {
@@ -778,6 +795,27 @@ figure.pop .btnClose i {
   width: 1180px;
   margin: 0 auto;
 }
+.facilities .inner #pics aside {
+  z-index: 99;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.facilities .inner #pics aside img {
+  height: 100%;
+}
+.facilities .inner #pics aside span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
 .facilities .inner #pics #wrap {
   background: rgb(23, 23, 23);
   width: 100%;
@@ -844,6 +882,18 @@ figure.pop .btnClose i {
 .facilities .inner #pics #wrap #list li div:hover a > img {
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
   filter: grayscale(0%);
+}
+
+.close {
+  position: absolute;
+  font-size: 40px;
+  top: 50px;
+  right: 50px;
+  cursor: pointer;
+  z-index: 999;
+}
+.close i {
+  color: rgb(207, 24, 41);
 }
 
 .room .inner section {

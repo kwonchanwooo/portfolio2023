@@ -4,18 +4,44 @@ const restgal = "72157721476189071"
 const bargal = "72157721524655065"
 const spagal = "72157721470708003"
 const banqgal = "72157721476188121"
-
 const key = '68728a337d057b4402914f709958247a';
 const per_page = 1;
 const frame = document.querySelector('#list');
 const loading = document.querySelector('.loading');
-
+const gal = document.querySelector('#pics')
 const li = document.querySelectorAll('#wrap nav ul li')
 const bangal = `${base}method=${method}&api_key=${key}&per_page=${per_page}&gallery_id=${banqgal}&format=json&nojsoncallback=1`;
 
 
 
 
+frame.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    if (e.target == frame) return;
+    let target = e.target.closest('.item').querySelector('.thumb');
+    if (e.target == target) {
+        let imgSrc = target.closest('a').getAttribute('href');
+        let pop = document.createElement('aside');
+        pop.classList.add('pop');
+        let pops = `
+		<img src="${imgSrc}">
+		<span class="close"><i class="fa-regular fa-circle-xmark"></i></span>
+	`;
+        pop.innerHTML = pops;
+        gal.append(pop);
+    } else {
+        return;
+    }
+});
+
+gal.addEventListener('click', (e) => {
+    let pop = gal.querySelector('.pop');
+    if (pop != null) {
+        let close = pop.querySelector('.close i');
+        if (e.target == close) pop.remove();
+    }
+});
 
 callData(bangal)
 li[0].addEventListener('click', () => {
@@ -80,15 +106,14 @@ function createList(items) {
     let htmls = '';
 
     items.map((el, index) => {
-        let imgSrcBig = `https://live.staticflickr.com/${el.server}/${el.id}_${el.secret}_m.jpg`;
-        let number = 1
+        let imgSrcBig = `https://live.staticflickr.com/${el.server}/${el.id}_${el.secret}_b.jpg`;
         let imgSrc = `https://live.staticflickr.com/${el.server}/${el.id}_${el.secret}_b.jpg`;
         console.log(items.length)
         htmls += `
         <li class="item">
           <div>
             <a href=${imgSrcBig}>
-              <img src=${imgSrc}>
+              <img class ="thumb" src=${imgSrc}>
             </a>
                 </div>
         </li>
