@@ -18,7 +18,7 @@
 			margin: 0 auto;
 
 			h1 {
-				font: bold 60px/1 "inter";
+				font: bold 45px 'inter';
 				margin-bottom: 30px;
 				// @include red;
 			}
@@ -57,7 +57,7 @@
 
 				.txt {
 					color: #fff;
-					font-family: "roboto";
+					font-family: 'roboto';
 					text-align: center;
 					margin-top: 20px;
 					letter-spacing: 1px;
@@ -87,133 +87,6 @@
 	}
 }
 
-.youtube {
-	width: 100%;
-	height: 1050px;
-	padding: 5px 0;
-	background: rgb(16, 16, 16);
-	.inner {
-		margin: 0 auto;
-		width: 1180px;
-		height: 600px;
-		padding-top: 30px;
-		h2 {
-			margin-bottom: 30px;
-			font: bold 60px/1 "inter";
-		}
-		.vidList {
-			width: 100%;
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			align-content: flex-start;
-
-			article {
-				width: 32%;
-				height: 400px;
-				background: rgb(23, 23, 23);
-				margin-bottom: 20px;
-				&:hover {
-					@include button;
-					.con {
-						p {
-							color: white;
-						}
-						span {
-							color: white;
-						}
-					}
-					.pic {
-						img {
-							filter: grayscale(0);
-						}
-					}
-				}
-				.pic {
-					display: block;
-					width: 100%;
-					height: 53%;
-					img {
-						width: 100%;
-						height: 100%;
-						object-fit: cover;
-						filter: grayscale(100%);
-					}
-				}
-				.con {
-					width: 100%;
-					height: 40%;
-					padding: 20px;
-					h2 {
-						margin-top: 10px;
-
-						font: bold 20px/1.2 "inter";
-						color: white;
-						margin-bottom: 15px;
-					}
-					p {
-						font: 14px/1.4 "roboto";
-						color: #666;
-						margin-top: 30px;
-
-						// margin-bottom: 20px;
-					}
-					span {
-						margin-top: 30px;
-						font: bold 16px/1 "roboto";
-						float: right;
-						@include red;
-					}
-				}
-			}
-		}
-	}
-}
-
-.location {
-	width: 100%;
-	background: rgb(23, 23, 23);
-	.inner {
-		margin: 0 auto;
-		padding-top: 30px;
-		h2 {
-			margin-bottom: 30px;
-			font: bold 60px/1 "inter";
-		}
-		width: 1180px;
-		height: 900px;
-		.wrap {
-			width: 100%;
-			#map {
-				width: 100%;
-				height: 650px;
-			}
-			.chain {
-				float: left;
-
-				li {
-					float: left;
-					&.on {
-						a {
-							@include red;
-						}
-					}
-					a {
-						margin-top: 20px;
-						margin-right: 20px;
-						display: block;
-						width: 200px;
-						height: 60px;
-						background: rgb(16, 16, 16);
-						color: white;
-						text-align: center;
-						font: bold 24px/60px "roboto";
-					}
-				}
-			}
-		}
-	}
-}
 figure.pop {
 	width: 100%;
 	height: 100vh;
@@ -240,32 +113,7 @@ figure.pop {
 		}
 	}
 }
-.side {
-	width: 200px;
-	position: absolute;
-	top: 600px;
-	left: 450px;
-	ul {
-		li {
-			a {
-				margin-bottom: 20px;
-				display: block;
-				height: 50px;
-				width: 100%;
-				text-align: center;
-				font: 24px/50px "roboto";
-				background: rgb(16, 16, 16);
-				&:hover {
-					@include red;
-					i {
-						@include red;
-						font-size: 24px/50px;
-					}
-				}
-			}
-		}
-	}
-}
+
 @media screen and (max-width: 1179px) {
 	.lists {
 		.sub_visual {
