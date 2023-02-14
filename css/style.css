@@ -741,40 +741,48 @@ a {
   flex-direction: column;
 }
 .room .inner section .pic {
-  transform: translateY(-150px);
   top: 100px;
   width: 100%;
   height: 600px;
 }
 .room .inner section .pic .swiper {
   width: 100%;
-  height: 600px;
+  height: 400px;
   padding-top: 50px;
   padding-bottom: 50px;
 }
 .room .inner section .pic .swiper .swiper-pagination {
-  padding-bottom: 60px;
+  padding-bottom: 40px;
 }
 .room .inner section .pic .swiper .swiper-wrapper .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 600px;
-  height: 400px;
+  width: 400px;
+  height: 200px;
 }
 .room .inner section .pic .swiper .swiper-wrapper .swiper-slide img {
   display: block;
   width: 100%;
+}
+.room .inner section:nth-of-type(2) .pic .swiper {
+  transform: translateY(-50px);
+}
+.room .inner section:nth-of-type(3) .pic .swiper {
+  transform: translateY(-50px);
+}
+.room .inner section:nth-of-type(4) .pic .swiper {
+  transform: translateY(-50px);
 }
 .room .inner section .desc {
   transform: translateY(-50px);
   width: 1180px;
   margin: 0 auto;
   display: flex;
-  height: 350px;
+  height: 300px;
 }
 .room .inner section .desc .desctxt {
   text-align: center;
-  padding: 40px;
+  padding: 20px;
   width: 60%;
 }
 .room .inner section .desc .desctxt > h1 {
@@ -791,7 +799,7 @@ a {
   align-items: center;
 }
 .room .inner section .desc > article {
-  height: 350px;
+  height: 300px;
   padding: 20px;
   text-align: left;
   width: 35%;
