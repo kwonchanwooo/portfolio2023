@@ -7,28 +7,29 @@
 			justify-content: center;
 			align-items: center;
 			height: calc(100vh - 80px);
-			display: flex;
-			flex-direction: column;
 
 			.pic {
-				top: 100px;
 				width: 100%;
-				height: 600px;
+				height: 60vh;
+				top: 120px;
+				position: absolute;
 				.swiper {
+					top: 0;
 					width: 100%;
-					height: 400px;
-					padding-top: 50px;
-					padding-bottom: 50px;
+					height: 45vh;
+					// padding-bottom: 10vh;
+
 					.swiper-pagination {
-						padding-bottom: 40px;
+						padding-top: 2vh;
 					}
 					.swiper-wrapper {
 						// height: 800px;
 						.swiper-slide {
+							margin-top: 40px;
 							background-position: center;
 							background-size: cover;
-							width: 400px;
-							height: 200px;
+							width: 50vh;
+							height: 30vh;
 							img {
 								display: block;
 								width: 100%;
@@ -38,6 +39,13 @@
 				}
 			}
 			&:nth-of-type(2) {
+				background: rgb(23, 23, 23);
+				&.on {
+					article {
+						opacity: 1;
+						transform: rotateY(0deg) translateY(0px);
+					}
+				}
 				.pic {
 					.swiper {
 						transform: translateY(-50px);
@@ -45,35 +53,41 @@
 				}
 			}
 			&:nth-of-type(3) {
+				background: rgb(29, 29, 29);
+
 				.pic {
+					width: 100%;
+
 					.swiper {
 						transform: translateY(-50px);
 					}
 				}
 			}
 			&:nth-of-type(4) {
+				background: rgb(23, 23, 23);
 				.pic {
+					width: 100%;
 					.swiper {
 						transform: translateY(-50px);
 					}
 				}
 			}
 			.desc {
-				transform: translateY(-50px);
+				transform: translateY(0px);
 
 				width: 1180px;
 				margin: 0 auto;
 				display: flex;
-				height: 300px;
+				height: 30vh;
 
 				.desctxt {
 					text-align: center;
-					padding: 20px;
+					padding: 2vh;
 					> h1 {
 						top: 100px;
 						font: bold 40px/1 'inter';
 						color: white;
-						margin-bottom: 40px;
+						margin-bottom: 4vh;
 					}
 					p {
 						width: 100%;
@@ -85,8 +99,8 @@
 					width: 60%;
 				}
 				> article {
-					height: 300px;
-					padding: 20px;
+					height: 30vh;
+					padding: 2vh;
 					text-align: left;
 					width: 35%;
 					background: rgb(16, 16, 16);
@@ -138,31 +152,21 @@
 					color: white;
 				}
 				.pic {
+					width: 100%;
+					height: 60vh;
+					top: 165px;
+					position: absolute;
 					.swiper {
 						.swiper-pagination {
-							padding-bottom: 40px;
+							padding-bottom: 0vh;
 						}
 					}
 				}
 				.desc {
-					margin-top: 40px;
+					margin-top: 4vh;
 				}
 			}
-			&:nth-of-type(2) {
-				background: rgb(23, 23, 23);
-				&.on {
-					article {
-						opacity: 1;
-						transform: rotateY(0deg) translateY(0px);
-					}
-				}
-			}
-			&:nth-of-type(3) {
-				.pic {
-					width: 100%;
-				}
-				background: rgb(29, 29, 29);
-			}
+
 			&:nth-of-type(4) {
 				.pic {
 					width: 100%;
