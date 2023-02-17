@@ -905,6 +905,56 @@ a {
   height: 80px;
 }
 
+@media screen and (max-width: 1179px) {
+  .room .inner {
+    width: 100%;
+  }
+  .room .inner section .pic {
+    height: 600px;
+  }
+  .room .inner section .pic:nth-of-type(1) {
+    height: 20vh;
+  }
+  .room .inner section .pic .swiper {
+    height: 35vh;
+  }
+  .room .inner section .pic .swiper .swiper-pagination {
+    padding-top: auto;
+  }
+  .room .inner section .pic .swiper .swiper-wrapper .swiper-slide {
+    height: 10vh;
+    width: 40vh;
+  }
+  .room .inner section .pic .swiper .swiper-wrapper .swiper-slide img {
+    width: 40vh;
+  }
+  .room .inner section .pic .desc {
+    padding: 0 40px;
+    width: 100%;
+    flex-direction: column;
+  }
+  .room .inner section .pic .desc .desctxt {
+    width: 100%;
+  }
+  .room .inner section .pic .desc > article {
+    height: 15vh;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 539px) {
+  .room {
+    height: 4750px;
+  }
+  .room .inner section {
+    padding: 0 40px;
+  }
+  .room .inner section .pic .swiper {
+    padding: 0 40px;
+  }
+  .room .inner section .pic .desc > article {
+    display: none;
+  }
+}
 .location {
   width: 100%;
   background: rgb(23, 23, 23);
