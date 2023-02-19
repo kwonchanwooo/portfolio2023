@@ -16,7 +16,7 @@
 		margin: 0 auto;
 		h1 {
 			padding-top: 40px;
-			font: bold 45px "inter";
+			font: bold 45px 'inter';
 			letter-spacing: 2px;
 		}
 		table {
@@ -46,6 +46,7 @@
 					}
 					&:nth-of-type(4) {
 						width: 15%;
+						// display: none;
 					}
 				}
 				td {
@@ -56,7 +57,10 @@
 						text-align: left;
 					}
 					&:nth-of-type(3) {
-						font-family: "맑은 고딕";
+						font-family: '맑은 고딕';
+					}
+					&:nth-of-type(4) {
+						// display: none;
 					}
 					a {
 						color: white;
@@ -69,7 +73,7 @@
 			width: 100%;
 			text-align: center;
 			&::after {
-				content: "";
+				content: '';
 				display: block;
 				clear: both;
 			}
@@ -137,7 +141,7 @@
 					display: inline-block;
 					width: 30px;
 					height: 30px;
-					font: 20px/30px "roboto";
+					font: 20px/30px 'roboto';
 					color: #666;
 					margin: 0 5px;
 					transition: 0.5s;
@@ -155,14 +159,14 @@
 
 @media screen and (max-width: 1179px) {
 	.community {
-		height: 900px;
+		height: 1500px;
 		.sub_visual {
 			height: 300px;
 		}
-		height: 1850px;
 		.inner {
 			width: 100%;
 			padding: 20px 20px;
+
 			.pagination {
 				.prev {
 					width: 80px;
@@ -177,18 +181,20 @@
 				}
 				.next {
 					width: 80px;
-					font-size: 20px;
-					line-height: 20px;
+					font-size: 15px;
+					line-height: 30px;
 
 					height: 20px;
 					i {
-						font-size: 20px;
-						line-height: 20px;
+						font-size: 15px;
+						line-height: 30px;
 					}
 				}
 				.numbers {
+					font-size: 15px;
 					a {
 						width: 20px;
+						font-size: 15px;
 					}
 				}
 			}
@@ -204,13 +210,43 @@
 
 @media screen and (max-width: 539px) {
 	.community {
-		height: 1300px;
+		height: 1400px;
 		.sub_visual {
 			height: 200px;
 		}
 		.inner {
 			width: 100%;
 			padding: 20px 20px;
+			table {
+				tr {
+					th {
+						&:nth-of-type(1) {
+							width: 10%;
+						}
+						&:nth-of-type(2) {
+							// width: 33%;
+						}
+						&:nth-of-type(3) {
+							width: 15%;
+						}
+						&:nth-of-type(4) {
+							display: none;
+						}
+					}
+				}
+				td {
+					&:nth-of-type(2) {
+						text-align: left;
+						width: 50%;
+					}
+					&:nth-of-type(3) {
+						font-family: '맑은 고딕';
+					}
+					&:nth-of-type(4) {
+						display: none;
+					}
+				}
+			}
 			.pagination {
 				.prev {
 					width: 15px;

@@ -312,8 +312,7 @@ a {
 
 @media screen and (max-width: 1179px) {
   .community {
-    height: 900px;
-    height: 1850px;
+    height: 1500px;
   }
   .community .sub_visual {
     height: 300px;
@@ -334,16 +333,20 @@ a {
   }
   .community .inner .pagination .next {
     width: 80px;
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 15px;
+    line-height: 30px;
     height: 20px;
   }
   .community .inner .pagination .next i {
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 15px;
+    line-height: 30px;
+  }
+  .community .inner .pagination .numbers {
+    font-size: 15px;
   }
   .community .inner .pagination .numbers a {
     width: 20px;
+    font-size: 15px;
   }
   .community .inner .wrap {
     width: 100%;
@@ -354,7 +357,7 @@ a {
 }
 @media screen and (max-width: 539px) {
   .community {
-    height: 1300px;
+    height: 1400px;
   }
   .community .sub_visual {
     height: 200px;
@@ -362,6 +365,25 @@ a {
   .community .inner {
     width: 100%;
     padding: 20px 20px;
+  }
+  .community .inner table tr th:nth-of-type(1) {
+    width: 10%;
+  }
+  .community .inner table tr th:nth-of-type(3) {
+    width: 15%;
+  }
+  .community .inner table tr th:nth-of-type(4) {
+    display: none;
+  }
+  .community .inner table td:nth-of-type(2) {
+    text-align: left;
+    width: 50%;
+  }
+  .community .inner table td:nth-of-type(3) {
+    font-family: "맑은 고딕";
+  }
+  .community .inner table td:nth-of-type(4) {
+    display: none;
   }
   .community .inner .pagination .prev {
     width: 15px;
@@ -514,8 +536,7 @@ a {
 @media screen and (max-width: 1179px) {
   .join {
     width: 100%;
-    height: 900px;
-    height: 1650px;
+    height: 1800px;
   }
   .join .sub_visual {
     height: 300px;
@@ -566,7 +587,7 @@ a {
 }
 @media screen and (max-width: 539px) {
   .join {
-    height: 1600px;
+    height: 1700px;
   }
   .join .sub_visual {
     height: 200px;
