@@ -551,43 +551,15 @@ a {
   .join .inner .wrap {
     width: 100%;
   }
-  .join .inner .wrap .pagination .prev {
-    width: 80px;
-    font-size: 20px;
-    line-height: 20px;
-    height: 20px;
-  }
-  .join .inner .wrap .pagination .prev i {
-    font-size: 20px;
-    line-height: 20px;
-  }
-  .join .inner .wrap .pagination .next {
-    width: 80px;
-    font-size: 20px;
-    line-height: 20px;
-    height: 20px;
-  }
-  .join .inner .wrap .pagination .next i {
-    font-size: 20px;
-    line-height: 20px;
-  }
-  .join .inner .wrap .pagination .numbers a {
-    width: 20px;
-  }
-  .join .inner .wrap .wrap {
-    width: 100%;
-  }
-  .join .inner .wrap .wrap h1 {
-    font-size: 40px;
-  }
   .join .inner .help {
+    margin-top: 40px;
     padding: 40px 0;
     width: 100%;
   }
 }
-@media screen and (max-width: 539px) {
+@media screen and (max-width: 1179px) and (max-width: 539px) {
   .join {
-    height: 1700px;
+    height: 1900px;
   }
   .join .sub_visual {
     height: 200px;
@@ -595,29 +567,6 @@ a {
   .join .inner {
     width: 100%;
     padding: 20px 20px;
-  }
-  .join .inner .pagination .prev {
-    width: 15px;
-  }
-  .join .inner .pagination .next {
-    line-height: 30px;
-    width: 30px;
-    height: 30px;
-  }
-  .join .inner .pagination .next i {
-    height: 30px;
-  }
-  .join .inner .pagination .next span {
-    position: absolute;
-    top: -9999999999px;
-    opacity: 0;
-  }
-  .join .inner .pagination .next i {
-    font-size: 15px;
-  }
-  .join .inner .pagination .numbers a {
-    width: 15px;
-    font-size: 15px;
   }
   .join .inner .wrap {
     width: 100%;

@@ -137,91 +137,30 @@
 			align-items: center;
 			.wrap {
 				width: 100%;
-
-				.pagination {
-					.prev {
-						width: 80px;
-						font-size: 20px;
-						line-height: 20px;
-
-						height: 20px;
-						i {
-							font-size: 20px;
-							line-height: 20px;
-						}
-					}
-					.next {
-						width: 80px;
-						font-size: 20px;
-						line-height: 20px;
-
-						height: 20px;
-						i {
-							font-size: 20px;
-							line-height: 20px;
-						}
-					}
-					.numbers {
-						a {
-							width: 20px;
-						}
-					}
-				}
-				.wrap {
-					width: 100%;
-					h1 {
-						font-size: 40px;
-					}
-				}
 			}
 			.help {
+				margin-top: 40px;
 				padding: 40px 0;
 				width: 100%;
 			}
 		}
 	}
-}
 
-@media screen and (max-width: 539px) {
-	.join {
-		height: 1700px;
-		.sub_visual {
-			height: 200px;
-		}
-		.inner {
-			width: 100%;
-			padding: 20px 20px;
-			.pagination {
-				.prev {
-					width: 15px;
-				}
-				.next {
-					line-height: 30px;
-					width: 30px;
-					height: 30px;
-					i {
-						height: 30px;
-					}
-					span {
-						position: absolute;
-						top: -9999999999px;
-						opacity: 0;
-					}
-					i {
-						font-size: 15px;
-					}
-				}
-				.numbers {
-					a {
-						width: 15px;
-						font-size: 15px;
-					}
-				}
+	@media screen and (max-width: 539px) {
+		.join {
+			height: 1900px;
+			.sub_visual {
+				height: 200px;
 			}
-			.wrap {
+			.inner {
 				width: 100%;
-				h1 {
-					font-size: 40px;
+				padding: 20px 20px;
+
+				.wrap {
+					width: 100%;
+					h1 {
+						font-size: 40px;
+					}
 				}
 			}
 		}
